@@ -22,9 +22,36 @@ a:hover {
 .section{
     background: cover;
     padding: 8px;
+    height: 100vh;
 }
+
+.section:not(:first-child) {
+    border-top: 4px dotted #FFDDDD;
+    margin: -3px;
+}
+
 .section:nth-child(odd) {
     background-color: var(--background-secondary);
 }
 
+#start {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
 
+h1 {
+    margin: 20px;
+}
+
+#problem-statement {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+#problem-statement p {
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: xx-large;
+}

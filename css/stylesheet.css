@@ -1,12 +1,12 @@
 :root {
     /* Background colors */
-    --background-main: #f8f8f8;
-    --background-secondary: #e1e1e1;
+    --background-main: #fed5bec0;
+    --background-secondary: rgba(221, 173, 146, 0.808);
     --background-tertiary: #d0d0d0;
 
     /* Text colors */
-    --header-text: #333;
-    --text-color: #666;
+    --header-text: #FFE4DF;
+    --text-color: #707070;
 
     /* Link colors */
     --link-color: #3498db;
@@ -29,5 +29,6 @@
 
 
     /* fonts */
-    --main-font: 'Times New Roman','Arial', sans-serif;
+    --main-font: 'Candara','Arial', sans-serif;
+    
 }
