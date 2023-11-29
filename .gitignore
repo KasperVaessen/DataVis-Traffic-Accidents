@@ -1,0 +1,9 @@
+# Ignore any temporary files
+*.tmp
+
+# Ignore IDE or editor-specific files
+.vscode/
+.idea/
+
+# Ignore big unused data files
+data/Motor_Vehicle_Collisions.csv

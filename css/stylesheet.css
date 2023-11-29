@@ -1,0 +1,33 @@
+:root {
+    /* Background colors */
+    --background-main: #f8f8f8;
+    --background-secondary: #e1e1e1;
+    --background-tertiary: #d0d0d0;
+
+    /* Text colors */
+    --header-text: #333;
+    --text-color: #666;
+
+    /* Link colors */
+    --link-color: #3498db;
+    --link-hover-color: #2980b9;
+
+    /* Graph colors according to tol color pallete*/
+    --graph-color1: #332288;
+    --graph-color2: #117733;
+    --graph-color3: #44AA99;
+    --graph-color4: #88CCEE;
+    --graph-color5: #DDCC77;
+    --graph-color6: #CC6677;
+    --graph-color7: #AA4499;
+    --graph-color8: #882255;
+
+    /* Button colors */
+    --button-background: #2ecc71;
+    --button-text: #fff;
+    --button-hover-background: #27ae60;
+
+
+    /* fonts */
+    --main-font: 'Times New Roman','Arial', sans-serif;
+}

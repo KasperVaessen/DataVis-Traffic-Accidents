@@ -1,0 +1,30 @@
+body {
+    background-color: var(--background-main);
+    font-family: var(--main-font);
+    color: var(--text-color);
+    font-size: larger;
+    margin: 0 auto;
+    /* overflow-x: hidden; */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--header-text);
+}
+
+a {
+    color: var(--link-color);
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+.section{
+    background: cover;
+    padding: 8px;
+}
+.section:nth-child(odd) {
+    background-color: var(--background-secondary);
+}
+
+
