@@ -6,6 +6,7 @@
 
     /* Text colors */
     --header-text: #FFE4DF;
+    --header-text2: var(--background-secondary);
     --text-color: #707070;
 
     /* Link colors */
