@@ -4,7 +4,7 @@ body {
     color: var(--text-color);
     font-size: larger;
     margin: 0 auto;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -30,7 +30,7 @@ a:hover {
     margin: -3px;
 }
 
-.section:nth-child(odd) {
+.section:nth-child(even) {
     background-color: var(--background-secondary);
 }
 
