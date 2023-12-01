@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link rel="stylesheet" href="css/stylesheet.css">
 <link rel="stylesheet" href="css/style.css">
+
 <html>
 <title>NYC Traffic Accidents</title>
 <body>
     <!-- Create a section for each plot you create -->
-    <div class="section">
-        <h1>New York City Traffic Accidents</h1>
-        <p>Problem, problem, attention, attention</p>
+    <div class="section" id="start">
+        <h1 class="title" data-aos="zoom-in" data-aos-duration="2000">The City that Never Sleeps</h1>
+        <h3 data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1500">A visual telling of traffic incidents in New York City.</h3>
     </div>
-    <div class="section">plot1</div>
+
+
+    <div class="section" id="problem-statement">
+        <p data-aos="fade-up" data-aos-duration="1500"> 
+            New York City is very crowded. The honking of car claxons can be heard 24 hours per day, 7 days per week. 
+            How do the citizens of the Big Apple adapt to the constant stream of traffic? 
+            And what is the influence of the measures the government has taken to reduce traffic fatalities? Let's take a deep dive into the data! 
+        </p>
+    </div>
     <div class="section">plot2</div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
     <script src="js/script.js" type="module"></script>
 </body>
 </html>

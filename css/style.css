@@ -4,7 +4,7 @@ body {
     color: var(--text-color);
     font-size: larger;
     margin: 0 auto;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -22,9 +22,36 @@ a:hover {
 .section{
     background: cover;
     padding: 8px;
+    height: 100vh;
 }
-.section:nth-child(odd) {
+
+.section:not(:first-child) {
+    border-top: 4px dotted #FFDDDD;
+    margin: -3px;
+}
+
+.section:nth-child(even) {
     background-color: var(--background-secondary);
 }
 
+#start {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
 
+h1 {
+    margin: 20px;
+}
+
+#problem-statement {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+#problem-statement p {
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: xx-large;
+}
