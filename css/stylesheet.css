@@ -12,7 +12,7 @@
     --link-color: #3498db;
     --link-hover-color: #2980b9;
 
-    /* Graph colors according to tol color pallete*/
+    /* Graph colors according to tol color pallete (works for colorblind)*/
     --graph-color1: #332288;
     --graph-color2: #117733;
     --graph-color3: #44AA99;

@@ -4,7 +4,10 @@ body {
     color: var(--text-color);
     font-size: larger;
     margin: 0 auto;
-    overflow-x: hidden;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* overflow-x: hidden; */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -40,7 +43,7 @@ a:hover {
     justify-content: center;
 }
 
-h1 {
+.title {
     margin: 20px;
 }
 
@@ -55,3 +58,20 @@ h1 {
     margin-right: 20%;
     font-size: xx-large;
 }
+
+#heatmap {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+.columns:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.column {
+    width: 50%;
+    padding: 20px;
+  }
