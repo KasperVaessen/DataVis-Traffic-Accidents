@@ -16,7 +16,7 @@ var path = d3.geoPath()
   .projection(projection);
 
 // Set svg width & height
-var svg = d3.select('#heatmap-svg')
+var svg = d3.select('#heatmap-cause-svg')
   .attr('width', width)
   .attr('height', height);
 
@@ -32,7 +32,7 @@ var legendLinear = d3.legendColor()
   .shapeWidth(width/20)
   .orient('vertical')
   .cells(6)
-  .labelFormat(d3.format(".2s"))
+  .labelFormat(d3.format(".0%"))
   .scale(color);
 
 
@@ -43,55 +43,39 @@ g.append('g')
 .attr('class', 'legendLinear')
 .attr('transform', 'translate(0,40)');
 
-
-function change_year() {
-  var year = document.getElementById("year").value;
-  d3.json('../data/nyc-neighborhoods.geojson').then(function(mapData) {
-    render_non_normalized_year(mapData, year);
+d3.json('../data/neighborhood_count_per_cause.json').then(function(crash_data) {
+    var causes = Object.keys(crash_data['neighborhoods'][Object.keys(crash_data['neighborhoods'])[0]]).slice(0,8)
+    causes.forEach((caus) => {
+      d3.select('#cause')
+          .append('option')
+          .text(caus)
+          .attr('value', caus); 
+          console.log(caus);
   });
-}
-document.getElementById("year").onchange = function() {change_year()};
-d3.json('../data/nyc-neighborhoods.geojson').then(function(mapData) {
-    // render_non_normalized(mapData);
-    render_non_normalized_year(mapData, 2013);
 });
 
-function render_non_normalized(mapData) {
-    d3.json('../data/borough_count.json').then(function(crash_data) {
-        // Load map data
-        const vals = Object.values(crash_data)
-        color.domain([d3.min(vals), d3.max(vals)]);
-        g.select(".legendLinear").call(legendLinear);
-        // console.log(min(crash_data))
-        
-        var features = mapData.features;
 
-        // Update color scale domain based on data
-
-        // Draw each province as a path
-        mapLayer.selectAll('path')
-            .data(features)
-            .join('path')
-            .attr('d', path)
-            .attr('vector-effect', 'non-scaling-stroke')
-            .style('stroke', 'gray')
-            .style('fill', fillFn)
-            .on('mouseover', mouseover)
-            .on('mouseout', mouseout)
-        
-        // Get province color
-        function fillFn(d){
-            return color(crash_data[nameFn(d)]);
-        }
-    });
+function change_cause() {
+  var cause = document.getElementById("cause").value;
+  d3.json('../data/nyc-neighborhoods.geojson').then(function(mapData) {
+    render_non_normalized_cause(mapData, cause);
+  });
 }
 
-function render_non_normalized_year(mapData, year) {
-  d3.json('../data/neighborhood_count.json').then(function(crash_data) {
+document.getElementById("cause").onchange = function() {change_cause()};
+
+d3.json('../data/nyc-neighborhoods.geojson').then(function(mapData) {
+    // render_non_normalized(mapData);
+    render_non_normalized_cause(mapData, 'Driver Inattention/Distraction');
+});
+
+function render_non_normalized_cause(mapData, cause) {
+  d3.json('../data/neighborhood_count_per_cause.json').then(function(crash_data) {
+    
       // Load map data
       // const vals = Object.values(crash_data)
 
-      color.domain([crash_data.min_accidents, crash_data.max_accidents]);
+      color.domain([Math.floor(crash_data.min_fraction/10)*10, Math.ceil(crash_data.max_fraction*10)/10]);
       g.select(".legendLinear").call(legendLinear);
       
       var features = mapData.features;
@@ -109,12 +93,12 @@ function render_non_normalized_year(mapData, year) {
           .on('mouseover', mouseover)
           .on('mouseout', mouseout)
           .on('click', (d) => {
-            mouseclick(d, crash_data, year)
+            mouseclick(d, crash_data, cause)
           })
       
       // Get province color
       function fillFn(d){
-          return color(crash_data['neighborhoods'][idFn(d)][year]);
+          return color(crash_data['neighborhoods'][idFn(d)][cause]);
       }
   });
 }
@@ -128,7 +112,7 @@ function idFn(d){
 }
 
 // create a tooltip
-var Tooltip = d3.select("#column_heatmap")
+var Tooltip = d3.select("#column_heatmap_cause")
   .append("div")
   .attr("class", "tooltip")
   .style("background-color", "white")
@@ -148,8 +132,8 @@ var mouseout = function(d) {
     .style('stroke', 'gray')
 }
 
-var mouseclick = function(d, crash_data, year) {
-  var number = crash_data['neighborhoods'][d.target.__data__.id][year]
+var mouseclick = function(d, crash_data, cause) {
+  var number = (crash_data['neighborhoods'][d.target.__data__.id][cause]*100).toString().slice(0, 5) + "%"
   Tooltip
     .html(d.target.__data__.properties.name + ": " + number)
   Tooltip
