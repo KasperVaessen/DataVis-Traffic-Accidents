@@ -5,5 +5,7 @@
 .vscode/
 .idea/
 
+/data-processing
+
 # Ignore big unused data files
 data/Motor_Vehicle_Collisions.csv
