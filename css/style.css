@@ -4,11 +4,11 @@ body {
     color: var(--text-color);
     font-size: larger;
     margin: 0 auto;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: var(--header-text);
+    color: var(--header-text2);
 }
 
 a {
@@ -22,9 +22,85 @@ a:hover {
 .section{
     background: cover;
     padding: 8px;
+    height: 100vh;
 }
-.section:nth-child(odd) {
+
+.section:not(:first-child) {
+    border-top: 4px dotted #FFDDDD;
+    margin: -3px;
+}
+
+.section:nth-child(even) {
     background-color: var(--background-secondary);
 }
 
+.section:nth-child(even) h1,h2,h3,h4,h5,h6 {
+    color: var(--header-text);
+}
 
+#start {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+h1 {
+    margin: 20px;
+}
+
+#problem-statement {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+#problem-statement p {
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: xx-large;
+}
+
+.header {
+    text-align: center;
+    font-size: 65px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.explainer {
+    font-size: 32px;
+    padding-top: 20px
+}
+
+.content {
+    display: flex;
+    margin-left: 5%;
+}
+
+.content p {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#contributing_factors {
+    margin-left: -100px;
+    margin-right: -90px;
+    margin-top: -60px;
+}
+
+#time {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+#time h1 {
+    font-size: 100px;
+    font-weight: bold;
+}
+
+#time h2 {
+    font-size: 50px;
+    font-weight: lighter;
+}
