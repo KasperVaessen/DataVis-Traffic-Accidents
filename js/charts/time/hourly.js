@@ -1,8 +1,12 @@
+import {colors, readableIntegerString} from '../constants.js';
+
 (function () {
   // set the dimensions and margins of the graph
   const margin = { top: 30, right: 30, bottom: 70, left: 60 },
     width = 600 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
+
+  const bar_color = colors['bar_primary']
 
   // append the svg object to the body of the page
   const svg = d3.select("#hourly")
@@ -57,7 +61,7 @@
         .style("opacity", 1)
     }
     var mousemove = function (event, d) {
-      Tooltip.html("Total crashes on "+ d["CRASH HOUR"] + "h : <b>" + d["Number Of Collisions"])
+      Tooltip.html("Total crashes on "+ d["CRASH HOUR"] + "h : <b>" + readableIntegerString(d["Number Of Collisions"]))
         .style("left", (event.pageX + 30) + "px")
         .style("top", (event.pageY) + "px");
     };
@@ -78,7 +82,8 @@
       .attr("y", d => y(d["Number Of Collisions"]))
       .attr("width", x.bandwidth())
       .attr("height", d => height - y(d["Number Of Collisions"]))
-      .attr("fill", "#69b3a2")
+      .attr("fill", bar_color)
+      .style("opacity", 0.8)
       .on("mouseover", mouseover)
       .on("mousemove", mousemove)
       .on("mouseleave", mouseleave)

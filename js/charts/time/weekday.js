@@ -1,8 +1,12 @@
+import { colors, readableIntegerString } from "../constants.js";
+
 (function () {
   // set the dimensions and margins of the graph
   const margin = { top: 30, right: 30, bottom: 70, left: 60 },
     width = 550 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
+
+  const bar_color = colors['bar_primary'];
 
   // append the svg object to the body of the page
   const svg = d3.select("#weekday")
@@ -69,9 +73,10 @@
 
 
     var mousemove = function (event, d) {
-      Tooltip.html("Total crashes on "+ d["CRASH WEEK"] + ": <b>" + d["Number Of Collisions"])
+      Tooltip.html("Total crashes on "+ weekdayMap[d["CRASH WEEK"]] + ": <b>" + readableIntegerString(d["Number Of Collisions"]))
         .style("left", (event.pageX + 30) + "px")
-        .style("top", (event.pageY) + "px");
+        .style("top", (event.pageY) + "px")
+        .style("z-index", 1000)
     };
 
     var mouseleave = function (d) {
@@ -90,7 +95,7 @@
       .attr("y", d => y(d["Number Of Collisions"]))
       .attr("width", x.bandwidth())
       .attr("height", d => height - y(d["Number Of Collisions"]))
-      .attr("fill", "#69b3a2")
+      .attr("fill", bar_color)
       .attr("opacity", 0.8)
       .on("mouseover", mouseover)
       .on("mousemove", mousemove)

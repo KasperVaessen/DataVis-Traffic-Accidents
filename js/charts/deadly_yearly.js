@@ -1,3 +1,5 @@
+import {colors} from './constants.js';
+
 (function () {
 
   // set the dimensions and margins of the graph
@@ -5,7 +7,7 @@
     width = 800 - margin.left - margin.right,
     height = 450 - margin.top - margin.bottom;
 
-  const bar_color = "#b57302"
+  const bar_color = colors['bar_primary']
 
   // append the svg object to the body of the page
   const svg = d3.select("#deadly_yearly")

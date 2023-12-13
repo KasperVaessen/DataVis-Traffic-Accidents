@@ -1,3 +1,5 @@
+import { colors, readableIntegerString } from '../constants.js';
+
 (function () {
 
   // set the dimensions and margins of the graph
@@ -14,7 +16,7 @@
     .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
   // Define color scale
-  const color = d3.scaleOrdinal(d3.schemeCategory10);
+  const color = d3.scaleOrdinal(colors['color_blind_friendly_4']);
 
   // Parse the Data
   d3.csv("/data/time/seasonal.csv").then(function (data) {
@@ -72,7 +74,7 @@
       .style("opacity", 0)
     d3.select(this)
       .style("stroke", "none")
-      .style("opacity", 0.8)
+      .style("opacity", 0.9)
   }
 
     // Bars
@@ -84,7 +86,7 @@
       .attr("width", d => x(+d["Number Of Collisions"]))
       .attr("height", y.bandwidth())
       .attr("fill", d => color(d["CRASH SEASON"])) // Assign colors based on categories
-      .attr("opacity", 0.8)
+      .attr("opacity", 0.9)
       .on("mouseover", mouseover)
       .on("mousemove", mousemove)
       .on("mouseleave", mouseleave)

@@ -1,3 +1,5 @@
+import {colors, readableIntegerString} from './constants.js';
+
 (function () {
   // set the dimensions and margins of the graph
   const margin = { top: 50, right: 0, bottom: 0, left: 0 },
@@ -5,6 +7,8 @@
     height = 850 - margin.top - margin.bottom,
     innerRadius = 50,
     outerRadius = Math.min(width, height) / 2;   // the outerRadius goes from the middle of the SVG area to the border
+
+  const bar_color = colors['bar_primary']
 
   // append the svg object
   const svg = d3.select("#contributing_factors")
@@ -51,10 +55,6 @@
         .style("opacity", 1)
     }
 
-    function readableIntegerString(integerString) {
-      return integerString.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    }
-
     var mousemove = function (event, d) {
       Tooltip.html("Percentage of accidents because of " + d.FACTOR + ": <b>" + d['PERCENTAGE'] + " </b>(" + readableIntegerString(d['COUNT']) + ")")
         .style("left", (event.pageX + 30) + "px")
@@ -74,7 +74,7 @@
       .selectAll("path")
       .data(data)
       .join("path")
-      .attr("fill", "#69b3a2")
+      .attr("fill", bar_color)
       .style("opacity", 0.8)
       .attr("class", "yo")
       .attr("d", d3.arc()     // imagine your doing a part of a donut plot
