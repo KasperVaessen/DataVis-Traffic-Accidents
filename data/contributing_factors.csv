@@ -1,0 +1,62 @@
+FACTOR,COUNT,DEADLY_COUNT
+1,16,0
+80,126,0
+Accelerator Defective,1142,0
+Aggressive Driving/Road Rage,11104,23
+Alcohol Involvement,23596,109
+Animals Action,1606,1
+Backing Unsafely,83384,44
+Brakes Defective,7251,0
+Cell Phone (hand-Held),572,0
+Cell Phone (hand-held),101,0
+Cell Phone (hands-free),318,0
+Driver Inattention/Distraction,499934,392
+Driver Inexperience,38421,59
+Driverless/Runaway Vehicle,1326,4
+Drugs (Illegal),543,3
+Drugs (illegal),896,8
+Eating or Drinking,128,0
+Failure to Keep Right,3981,6
+Failure to Yield Right-of-Way,137250,262
+Fatigued/Drowsy,59261,3
+Fell Asleep,6101,12
+Following Too Closely,129345,23
+Glare,4528,6
+Headlights Defective,192,0
+Illnes,1665,50
+Illness,2604,0
+Lane Marking Improper/Inadequate,1520,0
+Listening/Using Headphones,35,0
+Lost Consciousness,25674,47
+Obstruction/Debris,4983,9
+Other Electronic Device,3009,3
+Other Lighting Defects,241,1
+Other Vehicular,98189,38
+Outside Car Distraction,15458,7
+Oversized Vehicle,14683,7
+Passenger Distraction,9467,54
+Passing Too Closely,58941,2
+Passing or Lane Usage Improper,68779,36
+Pavement Defective,2632,9
+Pavement Slippery,23948,11
+Pedestrian/Bicyclist/Other Pedestrian Error/Confusion,11602,108
+Physical Disability,11569,37
+Prescription Medication,18454,9
+Reaction to Other Uninvolved Vehicle,1716,0
+Reaction to Uninvolved Vehicle,23229,10
+Shoulders Defective/Improper,102,0
+Steering Failure,2921,1
+Texting,53,0
+Tinted Windows,201,1
+Tire Failure/Inadequate,2601,3
+Tow Hitch Defective,242,1
+Traffic Control Device Improper/Non-Working,1353,0
+Traffic Control Disregarded,43107,251
+Turning Improperly,59026,24
+Unsafe Lane Changing,46700,15
+Unsafe Speed,32781,357
+Unspecified,2320440,2528
+Using On Board Navigation Device,163,0
+Vehicle Vandalism,145,0
+View Obstructed/Limited,16474,21
+Windshield Inadequate,85,0
