@@ -1,12 +1,14 @@
 // 1. Define a new scroller, and use the `.container` method to specify the desired container
 var scroll = scroller()
-    .container(d3.select('#adaptive_bar_plot'));
+    .container(d3.select('#steps'));
 
 // 2. Pass in a selection of all elements that you wish to fire a step event:
 scroll(d3.selectAll('.step')); // each section with class `step` is a new step
 
 // Specify the function you wish to activate when a section becomes active
 scroll.on('active', function(index) {
+    d3.selectAll('.step')
+      .style('opacity', function (d, i) { return i === index ? 1 : 0.1; });
   update(index);
 })
 
@@ -26,6 +28,4 @@ function update(index) {
             break;
         
     }
-    
-    // .attr("background", "white")
 }

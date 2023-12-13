@@ -104,10 +104,23 @@ a:hover {
 #sections {
     position: relative;
     display: inline-block;
-    top: 0px;
     z-index: 90;
+    /* margin-top: 400px; */
   }
 
+/* #sections:first-child {
+    margin-top: 200px;
+} */
+
 .step {
-    margin-bottom: 200px;
+    /* margin: 40vh auto 40vh auto; */
+    margin-top: 40vh;
+    /* margin-bottom: 40vh; */
+    /* display: flex; */
+    /* align-items: center; */
+    /* height: 40vh; */
+}
+
+.step:last-child {
+    margin-bottom: 40vh;
 }
