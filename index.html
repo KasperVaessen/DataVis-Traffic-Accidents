@@ -1,20 +1,159 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link rel="stylesheet" href="css/stylesheet.css">
 <link rel="stylesheet" href="css/style.css">
+
+<script src="https://d3js.org/d3.v6.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="/js/charts/deadly_yearly.js" defer></script>
+<script src="/js/charts/contributing_factors.js" defer></script>
+<script src="/js/charts/time/hourly.js" defer></script>
+<script src="/js/charts/time/weekday.js" defer></script>
+<script src="/js/charts/time/seasonal.js" defer></script>
+<script src="/js/charts/time/monthly.js" defer></script>
+
 <html>
 <title>NYC Traffic Accidents</title>
+
 <body>
     <!-- Create a section for each plot you create -->
-    <div class="section">
-        <h1>New York City Traffic Accidents</h1>
-        <p>Problem, problem, attention, attention</p>
+    <div class="section" id="start">
+        <h1 class="title" data-aos="zoom-in" data-aos-duration="2000">The City that Never Sleeps</h1>
+        <h3 data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1500">A visual telling of traffic incidents in
+            New York City.</h3>
     </div>
-    <div class="section">plot1</div>
-    <div class="section">plot2</div>
+
+
+    <div class="section" id="problem-statement">
+        <p data-aos="fade-up" data-aos-duration="1500">
+            New York City is very crowded. The honking of car claxons can be heard 24 hours per day, 7 days per week.
+            How do the citizens of the Big Apple adapt to the constant stream of traffic?
+            And what is the influence of the measures the government has taken to reduce traffic fatalities? Let's take
+            a deep dive into the data!
+        </p>
+    </div>
+    <!-- <div class="section">plot2</div> -->
+
+
+    <div class="section">
+        <h2 class="header" data-aos="fade-right" data-aos-duration="1500">NYC Deadly Accidents Trend</h2>
+        <div class="content">
+            <div class="explainer" data-aos="fade-right" data-aos-duration="1500">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa cum aliquid vel incidunt illo dolor!
+                    Nostrum voluptas itaque, minima officia dolorem, perferendis magnam excepturi cum ad eum maiores
+                    unde aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa cum aliquid vel incidunt
+                    illo dolor! Nostrum voluptas itaque, minima officia dolorem, perferendis magnam excepturi cum ad eum
+                    maiores unde aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa cum aliquid vel
+                    incidunt illo dolor! Nostrum voluptas itaque, minima officia dolorem, perferendis magnam excepturi
+                    cum ad eum maiores unde aut.
+                </p>
+            </div>
+            <div id="deadly_yearly"></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="header" data-aos="fade-right" data-aos-duration="1500">Contributing Factors</h2>
+        <div class="content">
+            <div class="explainer" data-aos="fade-right" data-aos-duration="1500">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa cum aliquid vel incidunt illo dolor!
+                    Nostrum voluptas itaque, minima officia dolorem, perferendis magnam excepturi cum ad eum maiores
+                    unde aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa cum aliquid vel incidunt
+                    illo dolor! Nostrum voluptas itaque, minima officia dolorem, perferendis magnam excepturi cum ad eum
+                    maiores unde aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa cum aliquid vel
+                    incidunt illo dolor! Nostrum voluptas itaque, minima officia dolorem, perferendis magnam excepturi
+                    cum ad eum maiores unde aut.
+                </p>
+            </div>
+            <div id="contributing_factors"></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="content" id="time">
+            <h1 data-aos="fade-zoom-in" data-aos-duration="1500">Car crashes over time</h1>
+            <h2 data-aos="fade-zoom-in" data-aos-duration="1500" data-aos-delay="300">Hier nog een mooie onderzin die
+                filosofisch klinkt</h3>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="header" data-aos="fade-right" data-aos-duration="1500"> NYC Car Accident Trends by Hour</h2>
+        <div class="content">
+            <div class="explainer" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="900">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa cum aliquid vel incidunt illo dolor!
+                    Nostrum voluptas itaque, minima officia dolorem, perferendis magnam excepturi cum ad eum maiores
+                    unde aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa cum aliquid vel incidunt
+                    illo dolor! Nostrum voluptas itaque, minima officia dolorem, perferendis magnam excepturi cum ad eum
+                    maiores unde aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa cum aliquid vel
+                    incidunt illo dolor! Nostrum voluptas itaque, minima officia dolorem, perferendis magnam excepturi
+                    cum ad eum maiores unde aut.
+                </p>
+            </div>
+            <div id="hourly"></div>
+        </div>
+    </div>
+    <div class="section">
+        <h2 class="header" data-aos="fade-left" data-aos-duration="1500"> NYC Car Accident Trends by Weekday</h2>
+        <div class="content">
+            <div id="weekday"></div>
+            <div class="explainer" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa cum aliquid vel incidunt illo dolor!
+                    Nostrum voluptas itaque, minima officia dolorem, perferendis magnam excepturi cum ad eum maiores
+                    unde aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa cum aliquid vel incidunt
+                    illo dolor! Nostrum voluptas itaque, minima officia dolorem, perferendis magnam excepturi cum ad eum
+                    maiores unde aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa cum aliquid vel
+                    incidunt illo dolor! Nostrum voluptas itaque, minima officia dolorem, perferendis magnam excepturi
+                    cum ad eum maiores unde aut.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <h2 class="header" data-aos="fade-left" data-aos-duration="1500"> NYC Car Accident Trends by Season</h2>
+        <div class="content">
+            <div class="explainer" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa cum aliquid vel incidunt illo dolor!
+                    Nostrum voluptas itaque, minima officia dolorem, perferendis magnam excepturi cum ad eum maiores
+                    unde aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa cum aliquid vel incidunt
+                    illo dolor! Nostrum voluptas itaque, minima officia dolorem, perferendis magnam excepturi cum ad eum
+                    maiores unde aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa cum aliquid vel
+                    incidunt illo dolor! Nostrum voluptas itaque, minima officia dolorem, perferendis magnam excepturi
+                    cum ad eum maiores unde aut.
+                </p>
+            </div>
+            <div id="seasonal"></div>
+        </div>
+    </div>
+    <div class="section">
+        <h2 class="header" data-aos="fade-left" data-aos-duration="1500"> NYC Car Accident Trends by Month</h2>
+        <div class="content">
+            <div id="monthly"></div>
+            <div class="explainer" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa cum aliquid vel incidunt illo dolor!
+                    Nostrum voluptas itaque, minima officia dolorem, perferendis magnam excepturi cum ad eum maiores
+                    unde aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa cum aliquid vel incidunt
+                    illo dolor! Nostrum voluptas itaque, minima officia dolorem, perferendis magnam excepturi cum ad eum
+                    maiores unde aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa cum aliquid vel
+                    incidunt illo dolor! Nostrum voluptas itaque, minima officia dolorem, perferendis magnam excepturi
+                    cum ad eum maiores unde aut.
+                </p>
+            </div>
+        </div>
+    </div>
+
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
     <script src="js/script.js" type="module"></script>
 </body>
+
 </html>
