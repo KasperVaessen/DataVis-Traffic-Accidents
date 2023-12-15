@@ -11,6 +11,10 @@ body {
     /* overflow-x: hidden; */
 }
 
+p {
+    font-size: x-large;
+}
+
 h1, h2, h3, h4, h5, h6 {
     color: var(--header-text2);
 }
@@ -21,11 +25,11 @@ a {
 
 a:hover {
     color: var(--link-hover-color);
+    cursor: pointer;
 }
 
 .section{
     background: cover;
-    padding: 8px;
     min-height: 100vh;
 }
 
@@ -77,7 +81,7 @@ a:hover {
 
 .column {
     width: 50%;
-    padding: 20px;
+    padding: 20px 100px 20px 100px
   }
 
 #heatmap {
@@ -92,34 +96,31 @@ a:hover {
 }
 
 #cause_per_year {
-    margin-top: 50vh;
     position: sticky;
-    top: 50vh;
+    top: 5vh;
     bottom: 300px;
     align-self: flex-start !important;
-    transform: translateY(-50%);
     z-index: 1;
 }
 
 #sections {
     position: relative;
     display: inline-block;
-    z-index: 90;
-    /* margin-top: 400px; */
+    border-left: 4px dotted #FFDDDD;
   }
 
-/* #sections:first-child {
-    margin-top: 200px;
-} */
-
 .step {
-    /* margin: 40vh auto 40vh auto; */
-    margin-top: 40vh;
-    /* margin-bottom: 40vh; */
-    /* display: flex; */
-    /* align-items: center; */
-    /* height: 40vh; */
+    margin-left: 20%;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    font-size: xx-large !important;
+    
 }
+.step p{
+    font-size: xx-large !important;
+}
+
+
 
 .step:last-child {
     margin-bottom: 40vh;

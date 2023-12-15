@@ -44,7 +44,7 @@ g.append('g')
 .attr('transform', 'translate(0,40)');
 
 d3.json('../data/neighborhood_count_per_cause.json').then(function(crash_data) {
-    var causes = Object.keys(crash_data['neighborhoods'][Object.keys(crash_data['neighborhoods'])[0]]).slice(0,8)
+    var causes = Object.keys(crash_data['neighborhoods'][Object.keys(crash_data['neighborhoods'])[0]]).slice(0,15)
     causes.forEach((caus) => {
       d3.select('#cause')
           .append('option')

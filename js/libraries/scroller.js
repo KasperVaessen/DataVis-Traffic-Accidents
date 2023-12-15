@@ -75,7 +75,6 @@ function scroller() {
       var startPos;
       sections.each(function (d, i) {
         var top = this.getBoundingClientRect().top;
-        console.log(top)
         if (i === 0) {
           startPos = top;
         }
@@ -93,7 +92,6 @@ function scroller() {
      */
     function position() {
       var pos = window.scrollY - 10 - containerStart;
-      // console.log(pos);
       var sectionIndex = d3.bisect(sectionPositions, pos);
       sectionIndex = Math.min(sections.size() - 1, sectionIndex);
   

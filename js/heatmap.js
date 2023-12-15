@@ -56,6 +56,16 @@ d3.json('../data/nyc-neighborhoods.geojson').then(function(mapData) {
     render_non_normalized_year(mapData, 2013);
 });
 
+document.getElementById("select2018").onclick = function() {
+  document.getElementById("year").value = 2018;
+  change_year();
+}
+
+document.getElementById("select2013").onclick = function() {
+  document.getElementById("year").value = 2013;
+  change_year();
+}
+
 function render_non_normalized(mapData) {
     d3.json('../data/borough_count.json').then(function(crash_data) {
         // Load map data
