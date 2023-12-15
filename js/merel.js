@@ -1,7 +1,6 @@
 var width = 800;
 var height = 600;
 
-
 // D3.js code to create the map will go here
 var svg = d3.select('#section2').append('svg')
         .attr('width', width)
@@ -24,4 +23,16 @@ svg.selectAll('path')
     .attr('d', path)
     .style('fill', 'steelblue')  // Customize the fill color
     .style('stroke', 'white');   // Customize the stroke color
+
+d3.json('data/location_volume.json').then(function(traffic_volume) {
+    // Draw my data
+    svg.selectAll("circle")
+        .data(traffic_volume)
+        .enter().append("circle")
+        .attr("cx", d => projection([d.longitude, d.latitude])[0])
+        .attr("cy", d => projection([d.longitude, d.latitude])[1])
+        .attr("r",  d => d.volume/100000)  // Adjust the radius based on your preference
+        .style("fill", d3.interpolateViridis)  // Use a color scale based on volume
+        .style("opacity", 0.8);
+    })
 })
