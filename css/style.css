@@ -128,10 +128,21 @@ a:hover {
     font-size: xx-large !important;
     
 }
-.step p{
+.step p {
     font-size: xx-large !important;
 }
 
 .step:last-child {
     margin-bottom: 40vh;
+}
+
+select {
+    background-color: var(--background-secondary);
+    color: var(--text-color);
+    font: var(--main-font);
+    font-size: medium;
+}
+
+#year {
+    background-color: var(--background-main);
 }

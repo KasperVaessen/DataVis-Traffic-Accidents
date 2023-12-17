@@ -4,7 +4,7 @@ var data_col = getComputedStyle(document.querySelector(':root')).getPropertyValu
 var width = document.getElementById('volume_map').clientWidth;
 var height = document.getElementById('volume_map').clientHeight;
 
-// D3.js code to create the map will go here
+// Traffic Volume map
 var volmap = d3.select('#volume_map').append('svg')
         .classed('NYC', true)
         .attr('width', width)
@@ -37,13 +37,13 @@ d3.json('data/location_volume.json').then(function(traffic_volume) {
         .attr("cx", d => projection([d.longitude, d.latitude])[0])
         .attr("cy", d => projection([d.longitude, d.latitude])[1])
         .attr("r",  d => d.volume/100000)  // Adjust the radius based on your preference
-        .style("fill", data_col)  // Use a color scale based on volume
+        .style("fill", data_col)  
         .style("opacity", 0.5)
     })
 })
 
 
-// D3.js code to create the map will go here
+// Accident map
 var a2018 = d3.select('#accidents2018').append('svg')
         .classed('NYC', true)
         .attr('width', width)
@@ -76,8 +76,8 @@ d3.json('data/accidents2018.json').then(function(accidents) {
         .classed('circle', true)
         .attr("cx", d => projection([d.LONGITUDE, d.LATITUDE])[0])
         .attr("cy", d => projection([d.LONGITUDE, d.LATITUDE])[1])
-        .attr("r",  d => d.accidents/20)  // Adjust the radius based on your preference
-        .style("fill", data_col)  // Use a color scale based on volume
+        .attr("r",  d => d.accidents/20)  
+        .style("fill", data_col)  
         .style("opacity", 0.5)
     })
 })
