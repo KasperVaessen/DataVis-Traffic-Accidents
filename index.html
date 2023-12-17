@@ -22,14 +22,29 @@
             And what is the influence of the measures the government has taken to reduce traffic fatalities? Let's take a deep dive into the data! 
         </p>
     </div>
-    <div class="section" id="section2">
-        <h2 class="volume-map">New York Map</h2>
+    
+    <!-- Hiertussen andere sections -->
+    
+    <!-- Deze nog margins etc geven, maar dat wil ik pas doen als ze op de final plek staan, misschien kunnen we wat css combineren. -->
+    <div class="section" id="volume1">
+        <h2 class="context" data-aos="fade-right" data-aos-duration="1500">Let's put the data in context</h2>
+        <p class="context-text" data-aos="fade-left" data-aos-duration="1500">When looking at data, we should not forget the context in which we are looking at it. The danger with location data is that we can easily create population maps, or in this case, traffic volume maps. We expect more traffic accidents to happen in busier areas, but is this reflected in the data?</p>
+    </div>
+
+    <div class="section">
+        <div class="column" id="volume-map" data-aos="fade-right" data-aos-duration="1500">
+            <h2>Traffic Volume in New York - 2018</h2>
+        </div>
+        <div class="column" id="accidents2018"  data-aos="fade-left" data-aos-duration="1500">
+            <h2>Traffic Accidents in New York - 2018</h2>
+        </div>
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init();</script>
     <script src="js/script.js" type="module"></script>     
-    <script src="js/merel.js" type="module"></script>
+    <script src="js/traffic_volume.js" type="module"></script>
+    <script src="js/accidents2018.js" type="module"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
 </body>
 </html>

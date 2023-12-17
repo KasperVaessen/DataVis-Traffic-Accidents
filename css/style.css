@@ -19,7 +19,7 @@ a:hover {
     color: var(--link-hover-color);
 }
 
-.section{
+.section {
     background: cover;
     padding: 8px;
     height: 100vh;
@@ -30,8 +30,12 @@ a:hover {
     margin: -3px;
 }
 
-.section:nth-child(even) {
+.section:nth-child(odd) {
     background-color: var(--background-secondary);
+}
+
+.section:nth-child(even) h2 {
+    color: var(--background-secondary);
 }
 
 #start {
@@ -54,4 +58,17 @@ h1 {
     margin-left: 20%;
     margin-right: 20%;
     font-size: xx-large;
+}
+
+.column {
+    width: 50%;
+    height: 100%;
+}
+
+#volume-map {
+    float: left;
+}
+
+#accidents2018 {
+    float: right;
 }
