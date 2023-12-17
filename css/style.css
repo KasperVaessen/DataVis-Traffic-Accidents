@@ -56,24 +56,17 @@ a:hover {
     margin: 20px;
 }
 
-#problem-statement {
+.titleslide {
     display: flex;
+    flex-direction: column;
     align-items: center; 
     justify-content: center;
 }
 
-#problem-statement p {
+.titleslide p {
     margin-left: 20%;
     margin-right: 20%;
     font-size: xx-large;
-}
-
-#volume-map {
-    float: left;
-}
-
-#accidents2018 {
-    float: right;
 }
 
 .columns {
@@ -90,8 +83,20 @@ a:hover {
 .column {
     width: 50%;
     padding: 20px 100px 20px 100px;
-    height: 100%;
-  }
+}
+
+.two_graphs {
+    display: flex;
+    justify-content: center;
+}
+
+.column_left {
+    width: 50%;
+}
+
+.column_right {
+    width: 50%;
+}
 
 #heatmap {
     align-items: center; 
