@@ -8,7 +8,6 @@ body {
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;
     overflow-y: auto;
-    /* overflow-x: hidden; */
 }
 
 p {
@@ -87,15 +86,14 @@ a:hover {
 
 .two_graphs {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: stretch; 
 }
 
-.column_left {
-    width: 50%;
-}
-
-.column_right {
-    width: 50%;
+.two_graphs h2 {
+    position: relative;
+    top:15%
 }
 
 #heatmap {
