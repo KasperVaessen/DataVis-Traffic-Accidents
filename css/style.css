@@ -134,8 +134,12 @@ a:hover {
 }
 
 .explainer {
-    font-size: 32px;
     padding-top: 20px
+}
+
+.explainer p {
+    font-size: 36px;
+    margin: 0;
 }
 
 .content {
@@ -152,6 +156,12 @@ a:hover {
     margin-left: -100px;
     margin-right: -90px;
     margin-top: -60px;
+    margin-bottom: -150px;
+    padding-top: 100px;
+}
+
+#contributing_factors_explainer {
+    padding-top: 100px;
 }
 
 #time {

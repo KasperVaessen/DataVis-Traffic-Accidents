@@ -3,10 +3,10 @@ import {colors, readableIntegerString} from './constants.js';
 (function () {
   // set the dimensions and margins of the graph
   const margin = { top: 50, right: 0, bottom: 0, left: 0 },
-    width = 850 - margin.left - margin.right,
-    height = 850 - margin.top - margin.bottom,
-    innerRadius = 50,
-    outerRadius = Math.min(width, height) / 2;   // the outerRadius goes from the middle of the SVG area to the border
+    width = 1000 - margin.left - margin.right,
+    height = 950 - margin.top - margin.bottom,
+    innerRadius = 90,
+    outerRadius = Math.min(width, height) / 1.85;   // the outerRadius goes from the middle of the SVG area to the border
 
   const bar_color = colors['bar_primary']
 
