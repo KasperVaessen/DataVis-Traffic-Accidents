@@ -4,11 +4,19 @@ body {
     color: var(--text-color);
     font-size: larger;
     margin: 0 auto;
-    overflow-x: hidden;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    overflow-y: auto;
+    /* overflow-x: hidden; */
+}
+
+p {
+    font-size: x-large;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: var(--header-text);
+    color: var(--header-text2);
 }
 
 a {
@@ -17,12 +25,12 @@ a {
 
 a:hover {
     color: var(--link-hover-color);
+    cursor: pointer;
 }
 
 .section {
     background: cover;
-    padding: 8px;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .section:not(:first-child) {
@@ -34,8 +42,8 @@ a:hover {
     background-color: var(--background-secondary);
 }
 
-.section:nth-child(even) h2 {
-    color: var(--background-secondary);
+.section:nth-child(odd) h1,h2,h3,h4,h5,h6 {
+    color: var(--header-text);
 }
 
 #start {
@@ -44,7 +52,7 @@ a:hover {
     justify-content: center;
 }
 
-h1 {
+.title {
     margin: 20px;
 }
 
@@ -60,15 +68,67 @@ h1 {
     font-size: xx-large;
 }
 
-.column {
-    width: 50%;
-    height: 100%;
-}
-
 #volume-map {
     float: left;
 }
 
 #accidents2018 {
     float: right;
+}
+
+.columns {
+    display: flex;
+    justify-content: center;
+}
+
+.columns:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.column {
+    width: 50%;
+    padding: 20px 100px 20px 100px;
+    height: 100%;
+  }
+
+#heatmap {
+    align-items: center; 
+}
+
+.circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: var(--graph-color1);
+}
+
+#cause_per_year {
+    position: sticky;
+    top: 5vh;
+    bottom: 300px;
+    align-self: flex-start !important;
+    z-index: 1;
+}
+
+#sections {
+    position: relative;
+    display: inline-block;
+    border-left: 4px dotted #FFDDDD;
+  }
+
+.step {
+    margin-left: 20%;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    font-size: xx-large !important;
+    
+}
+.step p{
+    font-size: xx-large !important;
+}
+
+.step:last-child {
+    margin-bottom: 40vh;
 }

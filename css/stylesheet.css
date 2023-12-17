@@ -1,19 +1,21 @@
 :root {
     /* Background colors */
     --background-main: #fed5bec0;
-    --background-secondary: rgba(221, 173, 146, 0.808);
+    --background-secondary: #ddad92ce;
     --background-tertiary: #d0d0d0;
 
     /* Text colors */
     --header-text: #FFE4DF;
+    --header-text2: var(--background-secondary);
     --text-color: #707070;
 
     /* Link colors */
-    --link-color: #3498db;
-    --link-hover-color: #2980b9;
+    --link-color: #8fb8de;
+    --link-hover-color: #6790b6;
 
-    /* Graph colors according to tol color pallete*/
-    --graph-color1: #332288;
+    /* Graph colors according to tol color pallete (works for colorblind)*/
+    /* --graph-color1: #332288; */
+    --graph-color1: #566246c0;
     --graph-color2: #117733;
     --graph-color3: #44AA99;
     --graph-color4: #88CCEE;
