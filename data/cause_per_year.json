@@ -1,0 +1,623 @@
+{
+    "2013": {
+        "Driver Inattention/Distraction": [
+            27903,
+            13
+        ],
+        "Failure to Yield Right-of-Way": [
+            9480,
+            23
+        ],
+        "Following Too Closely": [
+            147,
+            5
+        ],
+        "Other Vehicular": [
+            8038,
+            4
+        ],
+        "Backing Unsafely": [
+            5624,
+            4
+        ],
+        "Passing or Lane Usage Improper": [
+            77,
+            1
+        ],
+        "Fatigued/Drowsy": [
+            12794,
+            3
+        ],
+        "Turning Improperly": [
+            5707,
+            1
+        ],
+        "Passing Too Closely": [
+            1,
+            0
+        ],
+        "Unsafe Lane Changing": [
+            73,
+            0
+        ],
+        "Traffic Control Disregarded": [
+            2981,
+            36
+        ],
+        "Driver Inexperience": [
+            3044,
+            0
+        ],
+        "Unsafe Speed": [
+            218,
+            0
+        ],
+        "Lost Consciousness": [
+            5145,
+            2
+        ],
+        "Pavement Slippery": [
+            2146,
+            1
+        ]
+    },
+    "2014": {
+        "Driver Inattention/Distraction": [
+            31971,
+            26
+        ],
+        "Failure to Yield Right-of-Way": [
+            10884,
+            25
+        ],
+        "Following Too Closely": [
+            146,
+            2
+        ],
+        "Other Vehicular": [
+            11548,
+            6
+        ],
+        "Backing Unsafely": [
+            7192,
+            7
+        ],
+        "Passing or Lane Usage Improper": [
+            173,
+            0
+        ],
+        "Fatigued/Drowsy": [
+            15170,
+            0
+        ],
+        "Turning Improperly": [
+            6802,
+            2
+        ],
+        "Passing Too Closely": [
+            2,
+            0
+        ],
+        "Unsafe Lane Changing": [
+            89,
+            0
+        ],
+        "Traffic Control Disregarded": [
+            3358,
+            28
+        ],
+        "Driver Inexperience": [
+            3578,
+            3
+        ],
+        "Unsafe Speed": [
+            302,
+            0
+        ],
+        "Lost Consciousness": [
+            6470,
+            8
+        ],
+        "Pavement Slippery": [
+            3107,
+            3
+        ]
+    },
+    "2015": {
+        "Driver Inattention/Distraction": [
+            41786,
+            43
+        ],
+        "Failure to Yield Right-of-Way": [
+            12687,
+            18
+        ],
+        "Following Too Closely": [
+            166,
+            6
+        ],
+        "Other Vehicular": [
+            17570,
+            5
+        ],
+        "Backing Unsafely": [
+            8245,
+            6
+        ],
+        "Passing or Lane Usage Improper": [
+            83,
+            1
+        ],
+        "Fatigued/Drowsy": [
+            19836,
+            0
+        ],
+        "Turning Improperly": [
+            8326,
+            0
+        ],
+        "Passing Too Closely": [
+            3,
+            0
+        ],
+        "Unsafe Lane Changing": [
+            118,
+            0
+        ],
+        "Traffic Control Disregarded": [
+            4057,
+            46
+        ],
+        "Driver Inexperience": [
+            3708,
+            4
+        ],
+        "Unsafe Speed": [
+            347,
+            1
+        ],
+        "Lost Consciousness": [
+            8207,
+            0
+        ],
+        "Pavement Slippery": [
+            3623,
+            1
+        ]
+    },
+    "2016": {
+        "Driver Inattention/Distraction": [
+            61593,
+            37
+        ],
+        "Failure to Yield Right-of-Way": [
+            16703,
+            29
+        ],
+        "Following Too Closely": [
+            21009,
+            1
+        ],
+        "Other Vehicular": [
+            10911,
+            1
+        ],
+        "Backing Unsafely": [
+            11090,
+            5
+        ],
+        "Passing or Lane Usage Improper": [
+            10091,
+            4
+        ],
+        "Fatigued/Drowsy": [
+            4033,
+            0
+        ],
+        "Turning Improperly": [
+            7359,
+            1
+        ],
+        "Passing Too Closely": [
+            8751,
+            1
+        ],
+        "Unsafe Lane Changing": [
+            8527,
+            1
+        ],
+        "Traffic Control Disregarded": [
+            4638,
+            13
+        ],
+        "Driver Inexperience": [
+            4679,
+            1
+        ],
+        "Unsafe Speed": [
+            3889,
+            27
+        ],
+        "Lost Consciousness": [
+            1791,
+            1
+        ],
+        "Pavement Slippery": [
+            2473,
+            2
+        ]
+    },
+    "2017": {
+        "Driver Inattention/Distraction": [
+            66915,
+            55
+        ],
+        "Failure to Yield Right-of-Way": [
+            18108,
+            19
+        ],
+        "Following Too Closely": [
+            26865,
+            1
+        ],
+        "Other Vehicular": [
+            9766,
+            5
+        ],
+        "Backing Unsafely": [
+            12173,
+            2
+        ],
+        "Passing or Lane Usage Improper": [
+            13440,
+            5
+        ],
+        "Fatigued/Drowsy": [
+            286,
+            0
+        ],
+        "Turning Improperly": [
+            7007,
+            2
+        ],
+        "Passing Too Closely": [
+            11542,
+            1
+        ],
+        "Unsafe Lane Changing": [
+            10511,
+            1
+        ],
+        "Traffic Control Disregarded": [
+            5220,
+            6
+        ],
+        "Driver Inexperience": [
+            5085,
+            7
+        ],
+        "Unsafe Speed": [
+            4369,
+            45
+        ],
+        "Lost Consciousness": [
+            208,
+            3
+        ],
+        "Pavement Slippery": [
+            2942,
+            0
+        ]
+    },
+    "2018": {
+        "Driver Inattention/Distraction": [
+            70461,
+            24
+        ],
+        "Failure to Yield Right-of-Way": [
+            18348,
+            36
+        ],
+        "Following Too Closely": [
+            26438,
+            3
+        ],
+        "Other Vehicular": [
+            10032,
+            2
+        ],
+        "Backing Unsafely": [
+            12409,
+            4
+        ],
+        "Passing or Lane Usage Improper": [
+            13382,
+            5
+        ],
+        "Fatigued/Drowsy": [
+            262,
+            0
+        ],
+        "Turning Improperly": [
+            6533,
+            5
+        ],
+        "Passing Too Closely": [
+            11805,
+            0
+        ],
+        "Unsafe Lane Changing": [
+            9723,
+            5
+        ],
+        "Traffic Control Disregarded": [
+            4669,
+            8
+        ],
+        "Driver Inexperience": [
+            4188,
+            3
+        ],
+        "Unsafe Speed": [
+            3959,
+            28
+        ],
+        "Lost Consciousness": [
+            175,
+            8
+        ],
+        "Pavement Slippery": [
+            2863,
+            1
+        ]
+    },
+    "2019": {
+        "Driver Inattention/Distraction": [
+            68094,
+            39
+        ],
+        "Failure to Yield Right-of-Way": [
+            16534,
+            27
+        ],
+        "Following Too Closely": [
+            22608,
+            0
+        ],
+        "Other Vehicular": [
+            9457,
+            6
+        ],
+        "Backing Unsafely": [
+            10283,
+            7
+        ],
+        "Passing or Lane Usage Improper": [
+            11298,
+            0
+        ],
+        "Fatigued/Drowsy": [
+            210,
+            0
+        ],
+        "Turning Improperly": [
+            5125,
+            2
+        ],
+        "Passing Too Closely": [
+            10203,
+            0
+        ],
+        "Unsafe Lane Changing": [
+            7775,
+            1
+        ],
+        "Traffic Control Disregarded": [
+            3979,
+            13
+        ],
+        "Driver Inexperience": [
+            3765,
+            4
+        ],
+        "Unsafe Speed": [
+            3520,
+            37
+        ],
+        "Lost Consciousness": [
+            234,
+            5
+        ],
+        "Pavement Slippery": [
+            1975,
+            1
+        ]
+    },
+    "2020": {
+        "Driver Inattention/Distraction": [
+            34175,
+            29
+        ],
+        "Failure to Yield Right-of-Way": [
+            7904,
+            16
+        ],
+        "Following Too Closely": [
+            9208,
+            3
+        ],
+        "Other Vehicular": [
+            5080,
+            1
+        ],
+        "Backing Unsafely": [
+            4279,
+            4
+        ],
+        "Passing or Lane Usage Improper": [
+            5043,
+            7
+        ],
+        "Fatigued/Drowsy": [
+            136,
+            0
+        ],
+        "Turning Improperly": [
+            2359,
+            2
+        ],
+        "Passing Too Closely": [
+            4587,
+            0
+        ],
+        "Unsafe Lane Changing": [
+            2996,
+            3
+        ],
+        "Traffic Control Disregarded": [
+            2929,
+            32
+        ],
+        "Driver Inexperience": [
+            2212,
+            7
+        ],
+        "Unsafe Speed": [
+            3715,
+            55
+        ],
+        "Lost Consciousness": [
+            191,
+            3
+        ],
+        "Pavement Slippery": [
+            1299,
+            0
+        ]
+    },
+    "2021": {
+        "Driver Inattention/Distraction": [
+            31000,
+            34
+        ],
+        "Failure to Yield Right-of-Way": [
+            8122,
+            21
+        ],
+        "Following Too Closely": [
+            8685,
+            1
+        ],
+        "Other Vehicular": [
+            4481,
+            0
+        ],
+        "Backing Unsafely": [
+            3696,
+            2
+        ],
+        "Passing or Lane Usage Improper": [
+            5679,
+            2
+        ],
+        "Fatigued/Drowsy": [
+            149,
+            0
+        ],
+        "Turning Improperly": [
+            2589,
+            5
+        ],
+        "Passing Too Closely": [
+            4767,
+            0
+        ],
+        "Unsafe Lane Changing": [
+            2577,
+            3
+        ],
+        "Traffic Control Disregarded": [
+            3624,
+            11
+        ],
+        "Driver Inexperience": [
+            2512,
+            9
+        ],
+        "Unsafe Speed": [
+            4460,
+            69
+        ],
+        "Lost Consciousness": [
+            202,
+            8
+        ],
+        "Pavement Slippery": [
+            1002,
+            0
+        ]
+    },
+    "2022": {
+        "Driver Inattention/Distraction": [
+            30396,
+            38
+        ],
+        "Failure to Yield Right-of-Way": [
+            8122,
+            29
+        ],
+        "Following Too Closely": [
+            8071,
+            0
+        ],
+        "Other Vehicular": [
+            3980,
+            2
+        ],
+        "Backing Unsafely": [
+            3357,
+            2
+        ],
+        "Passing or Lane Usage Improper": [
+            5479,
+            7
+        ],
+        "Fatigued/Drowsy": [
+            129,
+            0
+        ],
+        "Turning Improperly": [
+            2636,
+            1
+        ],
+        "Passing Too Closely": [
+            4437,
+            0
+        ],
+        "Unsafe Lane Changing": [
+            2540,
+            1
+        ],
+        "Traffic Control Disregarded": [
+            3366,
+            21
+        ],
+        "Driver Inexperience": [
+            2135,
+            8
+        ],
+        "Unsafe Speed": [
+            4113,
+            58
+        ],
+        "Lost Consciousness": [
+            178,
+            6
+        ],
+        "Pavement Slippery": [
+            1077,
+            1
+        ]
+    },
+    "max": 70485
+}
