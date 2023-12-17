@@ -1,11 +1,11 @@
-import {colors} from './constants.js';
+import { colors } from './constants.js';
 
 (function () {
 
   // set the dimensions and margins of the graph
-  const margin = { top: 30, right: 30, bottom: 70, left: 60 },
+  const margin = { top: 30, right: 30, bottom: 70, left: 40 },
     width = 800 - margin.left - margin.right,
-    height = 450 - margin.top - margin.bottom;
+    height = 600 - margin.top - margin.bottom;
 
   const bar_color = colors['bar_primary']
 
@@ -36,7 +36,7 @@ import {colors} from './constants.js';
 
     // Add Y axis
     const y = d3.scaleLinear()
-      .domain([0, height])
+      .domain([0, 310])
       .range([height, 0]);
     svg.append("g")
       .call(d3.axisLeft(y));
@@ -67,7 +67,7 @@ import {colors} from './constants.js';
     }
 
     var mousemove = function (event, d) {
-      Tooltip.html("Number of deaths <br> in " + d.YEAR+ ": <b>" + d.DEADLY)
+      Tooltip.html("Number of deaths <br> in " + d.YEAR + ": <b>" + d.DEADLY)
         .style("left", (event.pageX + 30) + "px")
         .style("top", (event.pageY) + "px");
     };

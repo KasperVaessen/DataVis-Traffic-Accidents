@@ -1,10 +1,10 @@
-import {colors, readableIntegerString} from '../constants.js';
+import { colors, readableIntegerString } from '../constants.js';
 
 (function () {
   // set the dimensions and margins of the graph
   const margin = { top: 30, right: 30, bottom: 70, left: 60 },
-    width = 600 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    width = 700 - margin.left - margin.right,
+    height = 650 - margin.top - margin.bottom;
 
   const bar_color = colors['bar_primary']
 
@@ -61,7 +61,7 @@ import {colors, readableIntegerString} from '../constants.js';
         .style("opacity", 1)
     }
     var mousemove = function (event, d) {
-      Tooltip.html("Total crashes on "+ d["CRASH HOUR"] + "h : <b>" + readableIntegerString(d["Number Of Collisions"]))
+      Tooltip.html("Total crashes on " + d["CRASH HOUR"] + "h : <b>" + readableIntegerString(d["Number Of Collisions"]))
         .style("left", (event.pageX + 30) + "px")
         .style("top", (event.pageY) + "px");
     };
@@ -79,14 +79,20 @@ import {colors, readableIntegerString} from '../constants.js';
       .data(data)
       .join("rect")
       .attr("x", d => x(d["CRASH HOUR"]))
-      .attr("y", d => y(d["Number Of Collisions"]))
+      .attr("y", d => y(0)) // Start the bars from y = 0
       .attr("width", x.bandwidth())
-      .attr("height", d => height - y(d["Number Of Collisions"]))
+      .attr("height", 0) // Set initial height to 0
       .attr("fill", bar_color)
       .style("opacity", 0.8)
       .on("mouseover", mouseover)
       .on("mousemove", mousemove)
       .on("mouseleave", mouseleave)
+      .transition() // Apply transition to bars
+      .duration(1500)
+      .delay((d, i) => i * 50) // Add delay per bar
+      .attr("y", d => y(d["Number Of Collisions"])) // Final y position
+      .attr("height", d => height - y(d["Number Of Collisions"])); // Final height
+
 
   })
 

@@ -40,42 +40,42 @@ import { colors, readableIntegerString } from '../constants.js';
     svg.append("g")
       .call(d3.axisLeft(y))
 
-      // ----------------
+    // ----------------
     // Create a tooltip
     // ----------------
     const Tooltip = d3.select("#seasonal")
-    .append("div")
-    .style("opacity", 0)
-    .attr("class", "tooltip")
-    .style("background-color", "white")
-    .style("border", "solid")
-    .style("border-width", "1px")
-    .style("border-radius", "5px")
-    .style("padding", "10px")
-    .style("position", "absolute")
-
-  // Three function that change the tooltip when user hover / move / leave a cell
-  var mouseover = function (d) {
-    Tooltip
-      .style("opacity", 1)
-    d3.select(this)
-      .style("stroke", "black")
-      .style("opacity", 1)
-  }
-
-  var mousemove = function (event, d) {
-    Tooltip.html("Total crashes in "+ d["CRASH SEASON"] + ": <b>" + d["Number Of Collisions"])
-      .style("left", (event.pageX + 30) + "px")
-      .style("top", (event.pageY) + "px");
-  };
-
-  var mouseleave = function (d) {
-    Tooltip
+      .append("div")
       .style("opacity", 0)
-    d3.select(this)
-      .style("stroke", "none")
-      .style("opacity", 0.9)
-  }
+      .attr("class", "tooltip")
+      .style("background-color", "white")
+      .style("border", "solid")
+      .style("border-width", "1px")
+      .style("border-radius", "5px")
+      .style("padding", "10px")
+      .style("position", "absolute")
+
+    // Three function that change the tooltip when user hover / move / leave a cell
+    var mouseover = function (d) {
+      Tooltip
+        .style("opacity", 1)
+      d3.select(this)
+        .style("stroke", "black")
+        .style("opacity", 1)
+    }
+
+    var mousemove = function (event, d) {
+      Tooltip.html("Total crashes in " + d["CRASH SEASON"] + ": <b>" + d["Number Of Collisions"])
+        .style("left", (event.pageX + 30) + "px")
+        .style("top", (event.pageY) + "px");
+    };
+
+    var mouseleave = function (d) {
+      Tooltip
+        .style("opacity", 0)
+      d3.select(this)
+        .style("stroke", "none")
+        .style("opacity", 0.9)
+    }
 
     // Bars
     svg.selectAll("myRect")
@@ -83,13 +83,18 @@ import { colors, readableIntegerString } from '../constants.js';
       .join("rect")
       .attr("x", x(0))
       .attr("y", d => y(d["CRASH SEASON"]))
-      .attr("width", d => x(+d["Number Of Collisions"]))
+      .attr("width", 0) // Initial width set to 0
       .attr("height", y.bandwidth())
       .attr("fill", d => color(d["CRASH SEASON"])) // Assign colors based on categories
       .attr("opacity", 0.9)
       .on("mouseover", mouseover)
       .on("mousemove", mousemove)
       .on("mouseleave", mouseleave)
+      .transition() // Apply transition to bars
+      .duration(1500)
+      .delay((d, i) => i * 100) // Add delay per bar
+      .attr("width", d => x(+d["Number Of Collisions"])); // Final width based on data
+
   })
 
 })();

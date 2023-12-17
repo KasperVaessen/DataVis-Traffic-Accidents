@@ -134,14 +134,20 @@ import { colors, readableIntegerString } from '../constants.js';
       .data(data)
       .join("rect")
       .attr("x", d => x(d["CRASH MONTH"]))
-      .attr("y", d => y(d["Number Of Collisions"]))
+      .attr("y", height) // Initial y position at the bottom of the chart
       .attr("width", x.bandwidth())
-      .attr("height", d => height - y(d["Number Of Collisions"]))
+      .attr("height", 0) // Initial height set to 0
       .attr("fill", d => colorMap(d["CRASH MONTH"]))
       .attr("opacity", 0.8)
       .on("mouseover", mouseover)
       .on("mousemove", mousemove)
       .on("mouseleave", mouseleave)
+      .transition() // Apply transition to bars
+      .duration(1500)
+      .delay((d, i) => i * 100) // Add delay per bar
+      .attr("y", d => y(d["Number Of Collisions"])) // Final y position
+      .attr("height", d => height - y(d["Number Of Collisions"])); // Final height
+
 
 
     // Append a group for the legend
