@@ -45,7 +45,11 @@ a:hover {
     background-color: var(--background-secondary);
 }
 
-.section:nth-child(odd) h1,h2,h3,h4,h5,h6 {
+.section:nth-child(odd) h1 {
+    color: var(--header-text);
+}
+
+.section:nth-child(odd) h2 {
     color: var(--header-text);
 }
 
@@ -55,11 +59,20 @@ a:hover {
     flex-direction: column;
     align-items: center; 
     justify-content: center;
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.titleslide h1 {
+    font-size: 5em;
+}
+
+.titleslide h2 {
+    font-size: 2em;
 }
 
 .titleslide p {
-    margin-left: 20%;
-    margin-right: 20%;
     font-size: xx-large;
 }
 
