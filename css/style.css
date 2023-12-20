@@ -120,8 +120,6 @@ a:hover {
     font-size: xx-large !important;
 }
 
-
-
 .step:last-child {
     margin-bottom: 40vh;
 }
@@ -181,4 +179,43 @@ a:hover {
     font-weight: lighter;
     color: var(--header-text2);
     text-align: center;
+}
+
+img {
+    width: 60%;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+#a1 {
+    position: absolute;
+    transform: rotate(-30deg);
+    left: -4em;
+    top: 1em;
+}
+
+#a2 {
+    position: absolute;
+    transform: rotate(15deg);
+    right: -4em;
+    top: 1em;
+    
+}
+
+#a3 {
+    position: absolute;
+    transform: rotate(25deg);
+    left: 1em;
+    bottom: 5em;
+}
+
+#a4 {
+    position: absolute;
+    transform: rotate(-15deg);
+    right: 1em;
+    bottom: 5em;
 }
