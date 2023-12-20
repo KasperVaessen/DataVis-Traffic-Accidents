@@ -1,5 +1,5 @@
-var bg_col = getComputedStyle(document.querySelector(':root')).getPropertyValue('--graph-color4');
-var data_col = getComputedStyle(document.querySelector(':root')).getPropertyValue('--graph-color2');
+var bg_col = getComputedStyle(document.querySelector(':root')).getPropertyValue('--graph-color1_2');
+var data_col = getComputedStyle(document.querySelector(':root')).getPropertyValue('--graph-color3');
 
 var width = document.getElementById('volume_map').clientWidth;
 var height = document.getElementById('volume_map').clientHeight;
@@ -27,7 +27,7 @@ volmap.selectAll('path')
     .enter().append('path')
     .attr('d', path)
     .style('fill', bg_col)  // Customize the fill color
-    .style('stroke', 'white');   // Customize the stroke color
+    .style('stroke', 'gray');   // Customize the stroke color
 
 d3.json('data/location_volume.json').then(function(traffic_volume) {
     volmap.selectAll("circle")
@@ -67,7 +67,7 @@ a2018.selectAll('path')
     .enter().append('path')
     .attr('d', path)
     .style('fill', bg_col)  // Customize the fill color
-    .style('stroke', 'white');   // Customize the stroke color
+    .style('stroke', 'gray');   // Customize the stroke color
 
 d3.json('data/accidents2018.json').then(function(accidents) {
     a2018.selectAll("circle")
