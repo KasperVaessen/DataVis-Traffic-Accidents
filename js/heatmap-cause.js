@@ -5,8 +5,8 @@ var width = 500,
         centered;
 
 // Define color scale
-var first_graph_color = colors['first_graph_color'];
-var color = d3.scaleLinear([0, 500000], ['white', first_graph_color]);
+var heatmap_max = colors['heatmap_max'];
+var color = d3.scaleLinear([0, 500000], ['white', heatmap_max]);
 
 var projection = d3.geoMercator()
     .scale(45000)
