@@ -46,12 +46,12 @@ g.append('g')
 
 function change_year() {
   var year = document.getElementById("year").value;
-  d3.json('../data/nyc-neighborhoods.geojson').then(function(mapData) {
+  d3.json('/data/nyc_neighborhoods.geojson').then(function(mapData) {
     render_non_normalized_year(mapData, year);
   });
 }
 document.getElementById("year").onchange = function() {change_year()};
-d3.json('../data/nyc-neighborhoods.geojson').then(function(mapData) {
+d3.json('/data/nyc_neighborhoods.geojson').then(function(mapData) {
     // render_non_normalized(mapData);
     render_non_normalized_year(mapData, 2013);
 });
@@ -67,7 +67,7 @@ document.getElementById("select2013").onclick = function() {
 }
 
 function render_non_normalized(mapData) {
-    d3.json('../data/borough_count.json').then(function(crash_data) {
+    d3.json('/data/borough_count.json').then(function(crash_data) {
         // Load map data
         const vals = Object.values(crash_data)
         color.domain([d3.min(vals), d3.max(vals)]);
@@ -97,7 +97,7 @@ function render_non_normalized(mapData) {
 }
 
 function render_non_normalized_year(mapData, year) {
-  d3.json('../data/neighborhood_count.json').then(function(crash_data) {
+  d3.json('/data/neighborhood_count.json').then(function(crash_data) {
       // Load map data
       // const vals = Object.values(crash_data)
 

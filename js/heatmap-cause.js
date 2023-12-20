@@ -43,7 +43,7 @@ g.append('g')
 .attr('class', 'legendLinear')
 .attr('transform', 'translate(0,40)');
 
-d3.json('../data/neighborhood_count_per_cause.json').then(function(crash_data) {
+d3.json('/data/neighborhood_count_per_cause.json').then(function(crash_data) {
     var causes = Object.keys(crash_data['neighborhoods'][Object.keys(crash_data['neighborhoods'])[0]]).slice(0,15)
     causes.forEach((caus) => {
       d3.select('#cause')
@@ -57,20 +57,20 @@ d3.json('../data/neighborhood_count_per_cause.json').then(function(crash_data) {
 
 function change_cause() {
   var cause = document.getElementById("cause").value;
-  d3.json('../data/nyc-neighborhoods.geojson').then(function(mapData) {
+  d3.json('/data/nyc_neighborhoods.geojson').then(function(mapData) {
     render_non_normalized_cause(mapData, cause);
   });
 }
 
 document.getElementById("cause").onchange = function() {change_cause()};
 
-d3.json('../data/nyc-neighborhoods.geojson').then(function(mapData) {
+d3.json('/data/nyc_neighborhoods.geojson').then(function(mapData) {
     // render_non_normalized(mapData);
     render_non_normalized_cause(mapData, 'Driver Inattention/Distraction');
 });
 
 function render_non_normalized_cause(mapData, cause) {
-  d3.json('../data/neighborhood_count_per_cause.json').then(function(crash_data) {
+  d3.json('/data/neighborhood_count_per_cause.json').then(function(crash_data) {
     
       // Load map data
       // const vals = Object.values(crash_data)

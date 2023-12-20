@@ -16,6 +16,7 @@
     /* Graph colors according to tol color pallete (works for colorblind)*/
     /* --graph-color1: #332288; */
     --graph-color1: #566246c0;
+    --graph-color1_2: #DFE0DA;
     --graph-color2: #117733;
     --graph-color3: #44AA99;
     --graph-color4: #88CCEE;

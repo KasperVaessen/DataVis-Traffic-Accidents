@@ -8,7 +8,6 @@ body {
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;
     overflow-y: auto;
-    /* overflow-x: hidden; */
 }
 
 p {
@@ -28,7 +27,7 @@ a:hover {
     cursor: pointer;
 }
 
-.section{
+.section {
     background: cover;
     min-height: 100vh;
 }
@@ -38,11 +37,11 @@ a:hover {
     margin: -3px;
 }
 
-.section:nth-child(even) {
+.section:nth-child(odd) {
     background-color: var(--background-secondary);
 }
 
-.section:nth-child(even) h1,h2,h3,h4,h5,h6 {
+.section:nth-child(odd) h1,h2,h3,h4,h5,h6 {
     color: var(--header-text);
 }
 
@@ -56,13 +55,14 @@ a:hover {
     margin: 20px;
 }
 
-#problem-statement {
+.titleslide {
     display: flex;
+    flex-direction: column;
     align-items: center; 
     justify-content: center;
 }
 
-#problem-statement p {
+.titleslide p {
     margin-left: 20%;
     margin-right: 20%;
     font-size: xx-large;
@@ -81,8 +81,20 @@ a:hover {
 
 .column {
     width: 50%;
-    padding: 20px 100px 20px 100px
-  }
+    padding: 20px 100px 20px 100px;
+}
+
+.two_graphs {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: stretch; 
+}
+
+.two_graphs h2 {
+    position: relative;
+    top:15%
+}
 
 #heatmap {
     align-items: center; 
@@ -116,12 +128,23 @@ a:hover {
     font-size: xx-large !important;
     
 }
-.step p{
+.step p {
     font-size: xx-large !important;
 }
 
 .step:last-child {
     margin-bottom: 40vh;
+}
+
+select {
+    background-color: var(--background-secondary);
+    color: var(--text-color);
+    font: var(--main-font);
+    font-size: medium;
+}
+
+#year {
+    background-color: var(--background-main);
 }
 
 .header {

@@ -34,14 +34,14 @@
     </div>
 
 
-    <div class="section" id="problem-statement">
-        <p data-aos="fade-up" data-aos-duration="1500">
-            New York City is very crowded. The honking of car claxons can be heard 24 hours per day, 7 days per week.
-            How do the citizens of the Big Apple adapt to the constant stream of traffic?
-            And what is the influence of the measures the government has taken to reduce traffic fatalities? Let's take
-            a deep dive into the data!
+    <div class="section titleslide">
+        <p data-aos="fade-up" data-aos-duration="1500"> 
+            New York City is very crowded. The honking of car claxons can be heard 24 hours per day, 7 days per week. 
+            How do the citizens of the Big Apple adapt to the constant stream of traffic? 
+            And what is the influence of the measures the government has taken to reduce traffic fatalities? Let's take a deep dive into the data! 
         </p>
     </div>
+    
     <div class="section columns" id="heatmap">
         <div class="column" data-aos="fade-right" data-aos-duration="1500">
             <h1> The amount of traffic accidents are not constant</h1>
@@ -64,6 +64,20 @@
                 </select>
             </div>
             <svg id="heatmap-svg"></svg>
+        </div>
+    </div>
+   
+    <div class="section titleslide">
+        <h1 data-aos="fade-right" data-aos-duration="1500">Let's put the data in context</h1>
+        <p class="context-text" data-aos="fade-left" data-aos-duration="1500">When looking at data, we should not forget the context in which we are looking at it. The danger with location data is that we can easily create population maps, or in this case, traffic volume maps. We expect more traffic accidents to happen in busier areas, but is this reflected in the data?</p>
+    </div>
+
+    <div class="section two_graphs">
+        <div class="graph" id="volume_map" data-aos="fade-right" data-aos-duration="1500">
+            <h2>Traffic Volume in New York - 2018</h2>
+        </div>
+        <div class="graph" id="accidents2018"  data-aos="fade-left" data-aos-duration="1500">
+            <h2>Traffic Accidents in New York - 2018</h2>
         </div>
     </div>
 
@@ -225,6 +239,7 @@
         </ul>
     </div>
 
+    <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init();</script>
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
@@ -234,6 +249,7 @@
     <script src="js/heatmap.js" type="module"></script>
     <script src="js/heatmap-cause.js" type="module"></script>
     <script src="js/bar-on-scroll.js" type="module"></script>
+    <script src="js/traffic_volume.js" type="module"></script>
 </body>
 
 </html>
