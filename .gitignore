@@ -9,6 +9,7 @@
 
 # Ignore big unused data files
 data/Motor_Vehicle_Collisions.csv
+data-processing/
 
 #Ignore node modules
 node_modules/
