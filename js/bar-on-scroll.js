@@ -1,4 +1,6 @@
-var first_graph_color = getComputedStyle(document.querySelector(':root')).getPropertyValue('--graph-color1');
+import { colors, readableIntegerString } from '/js/charts/constants.js';
+
+var first_graph_color = colors['first_graph_color'];
 
 d3.json('data/cause_per_year.json').then(function(data_year) { 
     // 1. Define a new scroller, and use the `.container` method to specify the desired container

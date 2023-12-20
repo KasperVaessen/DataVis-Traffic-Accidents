@@ -1,5 +1,8 @@
+import { colors, readableIntegerString } from '/js/charts/constants.js';
+
 var bg_col = getComputedStyle(document.querySelector(':root')).getPropertyValue('--graph-color1_2');
-var data_col = getComputedStyle(document.querySelector(':root')).getPropertyValue('--graph-color3');
+// var data_col = getComputedStyle(document.querySelector(':root')).getPropertyValue('--graph-color2');
+var data_col = '#000000'
 
 var width = document.getElementById('volume_map').clientWidth;
 var height = document.getElementById('volume_map').clientHeight;

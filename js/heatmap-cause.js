@@ -1,9 +1,11 @@
+import { colors, readableIntegerString } from '/js/charts/constants.js';
+
 var width = 500,
         height = 500,
         centered;
 
 // Define color scale
-var first_graph_color = getComputedStyle(document.querySelector(':root')).getPropertyValue('--graph-color1');
+var first_graph_color = colors['first_graph_color'];
 var color = d3.scaleLinear([0, 500000], ['white', first_graph_color]);
 
 var projection = d3.geoMercator()

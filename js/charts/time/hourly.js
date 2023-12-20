@@ -6,7 +6,7 @@ import { colors, readableIntegerString } from '../constants.js';
     width = 700 - margin.left - margin.right,
     height = 650 - margin.top - margin.bottom;
 
-  const bar_color = colors['bar_primary']
+  const bar_color = colors['first_graph_color']
 
   // append the svg object to the body of the page
   const svg = d3.select("#hourly")
