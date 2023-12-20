@@ -17,10 +17,8 @@
 <html>
 <title>NYC Traffic Accidents</title>
 
-<body>
-    <!-- Create a section for each plot you create -->
-    
-    <div class="section" id="start">
+<body>    
+    <div class="section">
         <div class="news_container">
             <img id="a1" data-aos="fade-up" data-aos-duration="500" src="images/news-article-1.png">
             <img id="a2" data-aos="fade-left" data-aos-delay="500" data-aos-duration="500" src="images/news-article-2.png">
@@ -81,7 +79,7 @@
         </div>
     </div>
 
-    <div class="section columns" id="heatmap">
+    <div class="section" id="heatmap">
         <div class="column" data-aos="fade-right" data-aos-duration="1500">
             <h1 >Biggest Cause of traffic accidents</h1>
             <p>We have seen how many accidents there are in NYC. But what are actually the main causes of these accidents? Take a look at which causes are the main culprits in the districts.</p>
@@ -97,7 +95,7 @@
         </div>
     </div>
 
-    <div class="section columns" id="adaptive_bar_plot">
+    <div class="section" id="adaptive_bar_plot">
         <div class="column" id="steps" data-aos="fade-right" data-aos-duration="1500">
             <h1 class="margin-below">But what are the main causes of traffic accidents the last years?</h1>
             <p>According to <a href="https://www.nyc.gov/html/dot/html/pr2023/vision-zero-fatalities-dropped-2022.shtml">the city of New York</a>, 
@@ -146,96 +144,80 @@
         </div>
     </div>
     <div class="section">
-        <h1 class="header" data-aos="fade-right" data-aos-duration="1500">Contributing Factors</h1>
         <div class="content">
             <div class="explainer" id="contributing_factors_explainer" data-aos="fade-right" data-aos-duration="1500">
-                <p>
-                    One trend that stands out is the significant prevalence of accidents attributed to "Driver Inattention/Distraction," comprising nearly half a million incidents. This factor seems to be a primary contributor to accidents, showcasing the critical role of focused attention while driving. Additionally, "Failure to Yield Right-of-Way" and "Traffic Control Disregarded" appear as substantial contributors to accidents, emphasizing the importance of adherence to traffic rules for road safety.
+                <h2 class="header" data-aos="fade-right" data-aos-duration="1500">Contributing Factors</h2>
+                <p>One trend that stands out is the significant prevalence of accidents attributed to "Driver Inattention/Distraction," comprising nearly half a million incidents. This factor seems to be a primary contributor to accidents, showcasing the critical role of focused attention while driving. Additionally, "Failure to Yield Right-of-Way" and "Traffic Control Disregarded" appear as substantial contributors to accidents, emphasizing the importance of adherence to traffic rules for road safety.
                 </p>
             </div>
             <div id="contributing_factors"></div>
         </div>
     </div>
 
-    <div class="section">
-        <h1 class="header" data-aos="fade-right" data-aos-duration="1500">NYC Deadly Accidents Trend</h1>
-        <div class="content">
-            <div class="explainer" data-aos="fade-right" data-aos-duration="1500">
-                <p>
+    <div class="section columns">
+        <div class="column">
+            <h2 data-aos="fade-right" data-aos-duration="1500">NYC Deadly Accidents Trend</h2>
+                <p data-aos="fade-right" data-aos-duration="1500">
                     There appears to be a fluctuating trend in the number of fatalities from 2013 to 2022. While there are slight variations in specific years, there isn't a clear linear pattern of increase or decrease in fatalities over this time frame. However, the numbers seem to hover around an average range, with occasional spikes in certain years, indicating potential fluctuations in driving conditions, road safety measures, or other contributing factors impacting the fatality count.
                 </p>
-            </div>
-            <div id="deadly_yearly"></div>
         </div>
+        <div class="column" id="deadly_yearly"></div>
     </div>
 
-    <div class="section">
-        <div class="content" id="time">
-            <h1 data-aos="fade-zoom-in" data-aos-duration="1500">Car Crashes over Time</h1>
-            <h2 data-aos="fade-zoom-in" data-aos-duration="1500" data-aos-delay="300">We have seen trends with respect to location and contributing factors. But how does time play into account.</h3>
-        </div>
-    </div>
-
-    <div class="section">
-        <h1 class="header" data-aos="fade-right" data-aos-duration="1500"> NYC Car Accident Trends by Hour</h1>
-        <div class="content">
-            <div class="explainer" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="900">
-                <p>
-                    A concentration of collisions during the late afternoon hours, particularly between 16:00 and 18:00. This period seems to encompass the peak time for collisions, indicating higher traffic density or potential rush hours when people are commuting back home from work or running errands. Additionally, there's a significant drop in collisions during the early morning hours (between 2:00 and 6:00), possibly due to reduced traffic or fewer drivers on the road at those times.
-                </p>
-            </div>
-            <div id="hourly"></div>
-        </div>
-    </div>
-    <div class="section">
-        <h1 class="header" data-aos="fade-left" data-aos-duration="1500"> NYC Car Accident Trends by Weekday</h1>
-        <div class="content">
-            <div id="weekday"></div>
-            <div class="explainer" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">
-                <p>
-                    Fridays consistently exhibit the highest number of collisions compared to other days, totaling nearly 300,000 incidents. Conversely, Sundays appear to have the lowest collision count among the weekdays and weekends, potentially indicating lighter traffic or different driving behaviors on that day. This pattern suggests that Fridays might witness increased traffic or other factors contributing to a higher collision rate compared to the rest of the week.
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="section">
-        <h1 class="header" data-aos="fade-left" data-aos-duration="1500"> NYC Car Accident Trends by Season</h1>
-        <div class="content">
-            <div class="explainer" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">
-                <p>
-                    Analyzing collision data by seasons reveals that summer has the highest number of collisions, totaling over 480,000 incidents. This could be attributed to increased travel during vacation periods, more vehicles on the road for recreational purposes, or potentially more hazardous driving conditions due to factors like heatwaves or increased rainfall in some regions. On the other hand, winter records the lowest number of collisions, possibly due to more cautious driving behaviors in inclement weather conditions, although this can vary depending on the region's climate and road maintenance practices.
-                </p>
-            </div>
-            <div id="seasonal"></div>
-        </div>
-    </div>
-    <div class="section">
-        <h1 class="header" data-aos="fade-left" data-aos-duration="1500"> NYC Car Accident Trends by Month</h1>
-        <div class="content">
-            <div id="monthly"></div>
-            <div class="explainer" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">
-                <p>
-                    It's notable that June and May stand out with higher collision counts, exceeding 160,000 incidents each. This could potentially be due to increased travel, summer vacations, or more outdoor activities during these months, leading to higher traffic volumes and consequently more collisions. Conversely, February appears to have the lowest collision count, potentially due to shorter days and less outdoor activity or reduced travel compared to other months.
-                </p>
-            </div>
-        </div>
-    </div>
     <div class="section titleslide">
+        <div data-aos="fade-zoom-in" data-aos-duration="1500">
+            <h1>Car Crashes over Time</h1>
+            <h2 data-aos-delay="300">We have seen trends with respect to location and contributing factors. But how does time play into account.</h3>
+        </div>
+    </div>
+
+    <div class="section columns">
+        <div class="column" data-aos="fade-left" data-aos-duration="1500">
+            <h1> NYC Car Accident Trends by Hour</h1>
+            <p>A concentration of collisions during the late afternoon hours, particularly between 16:00 and 18:00. This period seems to encompass the peak time for collisions, indicating higher traffic density or potential rush hours when people are commuting back home from work or running errands. Additionally, there's a significant drop in collisions during the early morning hours (between 2:00 and 6:00), possibly due to reduced traffic or fewer drivers on the road at those times.</p>           
+        </div>
+        <div class="column" id="hourly"></div>
+    </div>
+
+    <div class="section columns">
+        <div class="column" data-aos="fade-left" data-aos-duration="1500">
+            <h1> NYC Car Accident Trends by Weekday</h1>
+            <p>Fridays consistently exhibit the highest number of collisions compared to other days, totaling nearly 300,000 incidents. Conversely, Sundays appear to have the lowest collision count among the weekdays and weekends, potentially indicating lighter traffic or different driving behaviors on that day. This pattern suggests that Fridays might witness increased traffic or other factors contributing to a higher collision rate compared to the rest of the week.</p>
+        </div>
+        <div class="column" id="weekday"></div>
+    </div>
+
+    <div class="section columns">
+        <div class="column" id="seasonal"></div>
+        <div class="column" data-aos="fade-left" data-aos-duration="1500">
+            <h1> NYC Car Accident Trends by Season</h1>
+            <p>Analyzing collision data by seasons reveals that summer has the highest number of collisions, totaling over 480,000 incidents. This could be attributed to increased travel during vacation periods, more vehicles on the road for recreational purposes, or potentially more hazardous driving conditions due to factors like heatwaves or increased rainfall in some regions. On the other hand, winter records the lowest number of collisions, possibly due to more cautious driving behaviors in inclement weather conditions, although this can vary depending on the region's climate and road maintenance practices.</p>
+        </div>
+        
+    </div>
+
+    <div class="section columns">
+        <div class="column" data-aos="fade-left" data-aos-duration="1500">
+            <h1> NYC Car Accident Trends by Month</h1>
+            <p>It's notable that June and May stand out with higher collision counts, exceeding 160,000 incidents each. This could potentially be due to increased travel, summer vacations, or more outdoor activities during these months, leading to higher traffic volumes and consequently more collisions. Conversely, February appears to have the lowest collision count, potentially due to shorter days and less outdoor activity or reduced travel compared to other months.</p>
+        </div>
+        <div class="monthly" id="monthly"></div>
+    </div>
+
+    <div class="section references">
         <h3>References</h3>
         <ul>
             <li>[1] All data about traffic accidents has been derived from <a href="https://www.kaggle.com/datasets/ishmaelkiptoo/motor-vehicle-collisions/">this dataset</a> from <a href="https://data.gov/">data.gov</a>. </li>
             <li>[2] Furthermore, data about traffic volume comes from All data about traffic accidents has been derived from <a href="https://data.cityofnewyork.us/Transportation/Automated-Traffic-Volume-Counts/7ym2-wayt">data.cityofnewyork.us</a>, which shows data from a few sensors and checks throughout New York City. </li>
             <li>[3] The City Map graphs have been made using location data about the neighbourhoods from <a href="TOEVOEGEN"> TO DO</a>.</li>
-            <li>[4] Information about the strategy of the city officials to reduce accidents can be found on <a href="https://www.nyc.gov/html/dot/html/pr2023/vision-zero-fatalities-dropped-2022.shtml">NYC.gov</a>.</li>
-            
-            
+            <li>[4] Information about the strategy of the city officials to reduce accidents can be found on <a href="https://www.nyc.gov/html/dot/html/pr2023/vision-zero-fatalities-dropped-2022.shtml">NYC.gov</a>.</li> 
         </ul>
         <h3>Newspaper articles on the first slide</h3>
         <ul>
-        <li>[1] <a href="https://www.nytimes.com/2023/12/11/briefing/us-traffic-deaths.html">US Traffic Deaths, New York Times</a></li>
-        <li>[2] <a href="https://www.nytimes.com/2022/11/27/upshot/road-deaths-pedestrians-cyclists.html">The Exceptionally American Problem of Rising Roadway Deaths, New York Times</a></li>
-        <li>[3] <a href="https://www.nytimes.com/2023/04/28/nyregion/traffic-deaths-nyc-vision-zero.html">When a Walkable City Becomes a Death Trap, New York Times</a></li>
-        <li>[4] <a href="https://www.nytimes.com/2022/02/15/briefing/vehicle-crashes-deaths-pandemic.html">Vehicle Crashes, Surging, New York Times</a></li>
+            <li>[1] <a href="https://www.nytimes.com/2023/12/11/briefing/us-traffic-deaths.html">US Traffic Deaths, New York Times</a></li>
+            <li>[2] <a href="https://www.nytimes.com/2022/11/27/upshot/road-deaths-pedestrians-cyclists.html">The Exceptionally American Problem of Rising Roadway Deaths, New York Times</a></li>
+            <li>[3] <a href="https://www.nytimes.com/2023/04/28/nyregion/traffic-deaths-nyc-vision-zero.html">When a Walkable City Becomes a Death Trap, New York Times</a></li>
+            <li>[4] <a href="https://www.nytimes.com/2022/02/15/briefing/vehicle-crashes-deaths-pandemic.html">Vehicle Crashes, Surging, New York Times</a></li>
         </ul>
     </div>
 

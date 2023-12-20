@@ -30,6 +30,10 @@ a:hover {
 .section {
     background: cover;
     min-height: 100vh;
+    margin: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .section:not(:first-child) {
@@ -45,15 +49,6 @@ a:hover {
     color: var(--header-text);
 }
 
-#start {
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-}
-
-.title {
-    margin: 20px;
-}
 
 .titleslide {
     display: flex;
@@ -68,9 +63,12 @@ a:hover {
     font-size: xx-large;
 }
 
-.columns {
+.references {
+    padding: 10%;
+    margin-left: 10%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: left;
 }
 
 .columns:after {
@@ -89,11 +87,11 @@ a:hover {
     justify-content: space-evenly;
     flex-direction: row;
     align-items: stretch; 
-}
+} 
 
 .two_graphs h2 {
     position: relative;
-    top:15%
+    top: 15%;
 }
 
 #heatmap {
@@ -119,15 +117,15 @@ a:hover {
     position: relative;
     display: inline-block;
     border-left: 4px dotted #FFDDDD;
-  }
+}
 
 .step {
     margin-left: 20%;
     margin-top: 20vh;
     margin-bottom: 20vh;
     font-size: xx-large !important;
-    
 }
+
 .step p {
     font-size: xx-large !important;
 }
@@ -145,63 +143,6 @@ select {
 
 #year {
     background-color: var(--background-main);
-}
-
-.header {
-    text-align: center;
-    font-size: 65px;
-    font-weight: bold;
-    margin: 0;
-}
-
-.explainer {
-    padding-top: 20px
-}
-
-.explainer p {
-    font-size: 36px;
-    margin: 0;
-}
-
-.content {
-    display: flex;
-    margin-left: 5%;
-}
-
-.content p {
-    margin-left: 5%;
-    margin-right: 5%;
-}
-
-#contributing_factors {
-    margin-left: -100px;
-    margin-right: -90px;
-    margin-top: -60px;
-    margin-bottom: -150px;
-    padding-top: 100px;
-}
-
-#contributing_factors_explainer {
-    padding-top: 100px;
-}
-
-#time {
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
-}
-
-#time h1 {
-    font-size: 100px;
-    font-weight: bold;
-}
-
-#time h2 {
-    font-size: 60px;
-    font-weight: lighter;
-    color: var(--header-text2);
-    text-align: center;
 }
 
 img {
