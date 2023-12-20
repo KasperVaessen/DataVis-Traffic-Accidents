@@ -10,7 +10,8 @@ const colors = {
         getComputedStyle(document.querySelector(':root')).getPropertyValue('--graph-color2'), 
         getComputedStyle(document.querySelector(':root')).getPropertyValue('--graph-color3'), 
         getComputedStyle(document.querySelector(':root')).getPropertyValue('--graph-color4')
-],
+    ],
+    'heatmap_max': "#003457"
 } 
 
 function readableIntegerString(integerString) {
