@@ -64,13 +64,13 @@ a:hover {
     background-color: var(--background-secondary);
 }
 
+.section:nth-child(odd) h3,
+.section:nth-child(odd) h2,
 .section:nth-child(odd) h1 {
     color: var(--header-text);
 }
 
-.section:nth-child(odd) h2 {
-    color: var(--header-text);
-}
+
 
 
 .titleslide {
@@ -101,6 +101,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: left;
+    align-items: left;
 }
 
 .columns:after {
@@ -153,8 +154,8 @@ a:hover {
 
 .step {
     margin-left: 20%;
-    margin-top: 20vh;
-    margin-bottom: 20vh;
+    /* margin-top: 20vh; */
+    margin-bottom: 30vh;
     font-size: xx-large !important;
 }
 
