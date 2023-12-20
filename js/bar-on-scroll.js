@@ -20,8 +20,8 @@ d3.json('data/cause_per_year.json').then(function(data_year) {
  
  // set the dimensions and margins of the graph
  var margin = {top: 30, right: 30, bottom: 170, left: 120},
-     width = 800 - margin.left - margin.right,
-     height = 800 - margin.top - margin.bottom;
+     width = 600 - margin.left - margin.right,
+     height = 600 - margin.top - margin.bottom;
  
  // append the svg object to the body of the page
  var svg = d3.select("#cause_per_year")

@@ -9,6 +9,7 @@ body {
     box-sizing: border-box;
     overflow-y: auto;
     overflow-x: hidden;
+    
 }
 
 p {
@@ -28,10 +29,27 @@ a:hover {
     cursor: pointer;
 }
 
+#main-title h1,
+#main-title h2 {
+    /* color: var(--text-color); */
+    /* opacity: 1; */
+    text-shadow: 5px 5px 5px black;
+}
+
+#main-title h2 {
+    color: white
+}
+
+#title_page {
+    opacity: 0.6;
+}
+
+
 .section {
     background: cover;
     min-height: 100vh;
-    margin: 3%;
+    /* margin: 3%; */
+    /* margin: -3px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,13 +64,13 @@ a:hover {
     background-color: var(--background-secondary);
 }
 
+.section:nth-child(odd) h3,
+.section:nth-child(odd) h2,
 .section:nth-child(odd) h1 {
     color: var(--header-text);
 }
 
-.section:nth-child(odd) h2 {
-    color: var(--header-text);
-}
+
 
 
 .titleslide {
@@ -83,6 +101,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: left;
+    align-items: left;
 }
 
 .columns:after {
@@ -135,8 +154,8 @@ a:hover {
 
 .step {
     margin-left: 20%;
-    margin-top: 20vh;
-    margin-bottom: 20vh;
+    /* margin-top: 20vh; */
+    margin-bottom: 30vh;
     font-size: xx-large !important;
 }
 
@@ -145,7 +164,7 @@ a:hover {
 }
 
 .step:last-child {
-    margin-bottom: 40vh;
+    margin-bottom: 20vh;
 }
 
 select {
@@ -167,6 +186,7 @@ img {
     background-color: #fff;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    display: block;
 }
 
 #a1 {
