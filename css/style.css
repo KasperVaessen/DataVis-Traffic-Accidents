@@ -9,6 +9,7 @@ body {
     box-sizing: border-box;
     overflow-y: auto;
     overflow-x: hidden;
+    
 }
 
 p {
@@ -28,10 +29,27 @@ a:hover {
     cursor: pointer;
 }
 
+#main-title h1,
+#main-title h2 {
+    /* color: var(--text-color); */
+    /* opacity: 1; */
+    text-shadow: 5px 5px 5px black;
+}
+
+#main-title h2 {
+    color: white
+}
+
+#title_page {
+    opacity: 0.6;
+}
+
+
 .section {
     background: cover;
     min-height: 100vh;
-    margin: 3%;
+    /* margin: 3%; */
+    /* margin: -3px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -167,6 +185,7 @@ img {
     background-color: #fff;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    display: block;
 }
 
 #a1 {
