@@ -120,6 +120,11 @@ a:hover {
     flex-direction: column;
 }
 
+.column_layout p {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
 #heatmap {
     align-items: center; 
 }
