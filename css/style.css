@@ -33,8 +33,8 @@ a:hover {
     min-height: 100vh;
     margin: 3%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: stretch;
+    justify-content: stretch;
 }
 
 .section:not(:first-child) {
@@ -85,12 +85,6 @@ a:hover {
     justify-content: left;
 }
 
-.columns:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
 .column {
     width: 50%;
     padding: 20px 100px 20px 100px;
@@ -100,12 +94,11 @@ a:hover {
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
-    align-items: stretch; 
+    min-height: 500px;
 } 
 
-.two_graphs h2 {
-    position: relative;
-    top: 15%;
+.column_layout {
+    flex-direction: column;
 }
 
 #heatmap {
