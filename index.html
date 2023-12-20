@@ -5,8 +5,18 @@
 <link rel="stylesheet" href="css/stylesheet.css">
 <link rel="stylesheet" href="css/style.css">
 
+<script src="https://d3js.org/d3.v6.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="/js/charts/deadly_yearly.js" type="module" defer></script>
+<script src="/js/charts/contributing_factors.js" type="module"  defer></script>
+<script src="/js/charts/time/hourly.js" type="module"  defer></script>
+<script src="/js/charts/time/weekday.js" type="module"  defer></script>
+<script src="/js/charts/time/seasonal.js" type="module"  defer></script>
+<script src="/js/charts/time/monthly.js" type="module"  defer></script>
+
 <html>
 <title>NYC Traffic Accidents</title>
+
 <body>
     <!-- Create a section for each plot you create -->
     
@@ -25,10 +35,11 @@
 
 
     <div class="section" id="problem-statement">
-        <p data-aos="fade-up" data-aos-duration="1500"> 
-            New York City is very crowded. The honking of car claxons can be heard 24 hours per day, 7 days per week. 
-            How do the citizens of the Big Apple adapt to the constant stream of traffic? 
-            And what is the influence of the measures the government has taken to reduce traffic fatalities? Let's take a deep dive into the data! 
+        <p data-aos="fade-up" data-aos-duration="1500">
+            New York City is very crowded. The honking of car claxons can be heard 24 hours per day, 7 days per week.
+            How do the citizens of the Big Apple adapt to the constant stream of traffic?
+            And what is the influence of the measures the government has taken to reduce traffic fatalities? Let's take
+            a deep dive into the data!
         </p>
     </div>
     <div class="section columns" id="heatmap">
@@ -55,7 +66,6 @@
             <svg id="heatmap-svg"></svg>
         </div>
     </div>
-
 
     <div class="section columns" id="heatmap">
         <div class="column" data-aos="fade-right" data-aos-duration="1500">
@@ -121,7 +131,81 @@
             
         </div>
     </div>
+    <div class="section">
+        <h1 class="header" data-aos="fade-right" data-aos-duration="1500">Contributing Factors</h1>
+        <div class="content">
+            <div class="explainer" id="contributing_factors_explainer" data-aos="fade-right" data-aos-duration="1500">
+                <p>
+                    One trend that stands out is the significant prevalence of accidents attributed to "Driver Inattention/Distraction," comprising nearly half a million incidents. This factor seems to be a primary contributor to accidents, showcasing the critical role of focused attention while driving. Additionally, "Failure to Yield Right-of-Way" and "Traffic Control Disregarded" appear as substantial contributors to accidents, emphasizing the importance of adherence to traffic rules for road safety.
+                </p>
+            </div>
+            <div id="contributing_factors"></div>
+        </div>
+    </div>
 
+    <div class="section">
+        <h1 class="header" data-aos="fade-right" data-aos-duration="1500">NYC Deadly Accidents Trend</h1>
+        <div class="content">
+            <div class="explainer" data-aos="fade-right" data-aos-duration="1500">
+                <p>
+                    There appears to be a fluctuating trend in the number of fatalities from 2013 to 2022. While there are slight variations in specific years, there isn't a clear linear pattern of increase or decrease in fatalities over this time frame. However, the numbers seem to hover around an average range, with occasional spikes in certain years, indicating potential fluctuations in driving conditions, road safety measures, or other contributing factors impacting the fatality count.
+                </p>
+            </div>
+            <div id="deadly_yearly"></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="content" id="time">
+            <h1 data-aos="fade-zoom-in" data-aos-duration="1500">Car Crashes over Time</h1>
+            <h2 data-aos="fade-zoom-in" data-aos-duration="1500" data-aos-delay="300">We have seen trends with respect to location and contributing factors. But how does time play into account.</h3>
+        </div>
+    </div>
+
+    <div class="section">
+        <h1 class="header" data-aos="fade-right" data-aos-duration="1500"> NYC Car Accident Trends by Hour</h1>
+        <div class="content">
+            <div class="explainer" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="900">
+                <p>
+                    A concentration of collisions during the late afternoon hours, particularly between 16:00 and 18:00. This period seems to encompass the peak time for collisions, indicating higher traffic density or potential rush hours when people are commuting back home from work or running errands. Additionally, there's a significant drop in collisions during the early morning hours (between 2:00 and 6:00), possibly due to reduced traffic or fewer drivers on the road at those times.
+                </p>
+            </div>
+            <div id="hourly"></div>
+        </div>
+    </div>
+    <div class="section">
+        <h1 class="header" data-aos="fade-left" data-aos-duration="1500"> NYC Car Accident Trends by Weekday</h1>
+        <div class="content">
+            <div id="weekday"></div>
+            <div class="explainer" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">
+                <p>
+                    Fridays consistently exhibit the highest number of collisions compared to other days, totaling nearly 300,000 incidents. Conversely, Sundays appear to have the lowest collision count among the weekdays and weekends, potentially indicating lighter traffic or different driving behaviors on that day. This pattern suggests that Fridays might witness increased traffic or other factors contributing to a higher collision rate compared to the rest of the week.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <h1 class="header" data-aos="fade-left" data-aos-duration="1500"> NYC Car Accident Trends by Season</h1>
+        <div class="content">
+            <div class="explainer" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">
+                <p>
+                    Analyzing collision data by seasons reveals that summer has the highest number of collisions, totaling over 480,000 incidents. This could be attributed to increased travel during vacation periods, more vehicles on the road for recreational purposes, or potentially more hazardous driving conditions due to factors like heatwaves or increased rainfall in some regions. On the other hand, winter records the lowest number of collisions, possibly due to more cautious driving behaviors in inclement weather conditions, although this can vary depending on the region's climate and road maintenance practices.
+                </p>
+            </div>
+            <div id="seasonal"></div>
+        </div>
+    </div>
+    <div class="section">
+        <h1 class="header" data-aos="fade-left" data-aos-duration="1500"> NYC Car Accident Trends by Month</h1>
+        <div class="content">
+            <div id="monthly"></div>
+            <div class="explainer" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">
+                <p>
+                    It's notable that June and May stand out with higher collision counts, exceeding 160,000 incidents each. This could potentially be due to increased travel, summer vacations, or more outdoor activities during these months, leading to higher traffic volumes and consequently more collisions. Conversely, February appears to have the lowest collision count, potentially due to shorter days and less outdoor activity or reduced travel compared to other months.
+                </p>
+            </div>
+        </div>
+    </div>
     <div class="section titleslide">
         <h3>References</h3>
         <ul>
@@ -151,4 +235,5 @@
     <script src="js/heatmap-cause.js" type="module"></script>
     <script src="js/bar-on-scroll.js" type="module"></script>
 </body>
+
 </html>

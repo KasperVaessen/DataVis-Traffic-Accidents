@@ -124,6 +124,63 @@ a:hover {
     margin-bottom: 40vh;
 }
 
+.header {
+    text-align: center;
+    font-size: 65px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.explainer {
+    padding-top: 20px
+}
+
+.explainer p {
+    font-size: 36px;
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    margin-left: 5%;
+}
+
+.content p {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#contributing_factors {
+    margin-left: -100px;
+    margin-right: -90px;
+    margin-top: -60px;
+    margin-bottom: -150px;
+    padding-top: 100px;
+}
+
+#contributing_factors_explainer {
+    padding-top: 100px;
+}
+
+#time {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+#time h1 {
+    font-size: 100px;
+    font-weight: bold;
+}
+
+#time h2 {
+    font-size: 60px;
+    font-weight: lighter;
+    color: var(--header-text2);
+    text-align: center;
+}
+
 img {
     width: 60%;
     margin: 10px;
